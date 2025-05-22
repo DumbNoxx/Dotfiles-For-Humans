@@ -1,0 +1,20 @@
+// Colors
+$background-primary: #000;
+
+// Fonts
+$font-primary: "font-primary", system-ui, sans-serif;
+
+$font-sizes: (
+  "base": 1rem,
+  "lg": 1.25rem,
+  "xl": 2rem,
+);
+
+// Base
+$width-body: 100%;
+$height-body: 100%;
+$margin-body: 0;
+
+// Reset
+$box-predecible: border-box;
+$scroll-smooth: smooth;

@@ -1,48 +1,58 @@
-# Astro Starter Kit: Basics
+# Dotfiles for Humans 🚀 _[Under Construction]_
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to Dotfiles for Humans, my modern portfolio built with Astro, React, TypeScript, and Sass! This project showcases my work, skills, and featured projects, crafted with cutting-edge technologies and best practices.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+> **Note:** This project is currently under active development. Features and documentation are being added regularly.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features ✨
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Modern & Responsive Design**: Clean and adaptable interface for all devices
+- **Featured Projects**: Highlights of my most relevant work _(coming soon)_
+- **Contact Section**: Easy access for collaborations or inquiries _(in progress)_
+- **Cutting-Edge Technologies**: Built with Astro, React, TypeScript and Sass
+- **Optimized Performance**: Lightning-fast loading with Astro's static generation
 
-## 🚀 Project Structure
+## Technologies Used 🛠️
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Astro**: Modern static site generator
+- **React**: Library for building interactive components
+- **TypeScript**: For type-safe and maintainable code
+- **Sass**: Professional CSS with variables and mixins
+- **Vite**: Blazing fast build tool
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Installation ⚙️
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Clone the repository:  
+`git clone git@github.com:DumbNoxx/Dotfiles-For-Humans.git`
 
-## 🧞 Commands
+Install dependencies:  
+`npm install`
 
-All commands are run from the root of the project, from a terminal:
+Start the development server:  
+`npm run dev`
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## How to Contribute 🤝
 
-## 👀 Want to learn more?
+Contributions are welcome! If you have any ideas or suggestions:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## License 📄
+
+Apache License 2.0 - See [LICENSE](LICENSE) for details.
+
+## Contact 📧
+
+Have questions or want to collaborate? Reach out!
+
+- **GitHub**: [DumbNoxx](https://github.com/DumbNoxx)
+- **LinkedIn**: [Dylan Marcano](your-linkedin-link)
+
+---
+
+✨ **Configuration made human-friendly**  
+🚧 _More features coming soon!_

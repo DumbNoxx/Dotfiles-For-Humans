@@ -1,0 +1,14 @@
+@use "../variables";
+
+html,
+body {
+  margin: variables.$margin-body;
+  width: variables.$width-body;
+  height: variables.$height-body;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
