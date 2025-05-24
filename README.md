@@ -50,7 +50,7 @@ Apache License 2.0 - See [LICENSE](LICENSE) for details.
 Have questions or want to collaborate? Reach out!
 
 - **GitHub**: [DumbNoxx](https://github.com/DumbNoxx)
-- **LinkedIn**: [Dylan Marcano](your-linkedin-link)
+- **LinkedIn**: [Dylan Marcano](https://www.linkedin.com/in/dylan-marcano-994205266)
 
 ---
 
