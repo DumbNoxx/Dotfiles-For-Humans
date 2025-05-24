@@ -5,10 +5,12 @@ body {
   margin: variables.$margin-body;
   width: variables.$width-body;
   height: variables.$height-body;
+  background-color: variables.$background-primary;
 }
 
 main {
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }

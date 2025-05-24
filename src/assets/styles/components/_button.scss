@@ -1,3 +1,47 @@
-.btn-test {
-  margin-left: 2rem;
+@use "../variables";
+@use "../base/animations";
+$buttons: ("github", "chevron-up");
+
+.btn {
+  background: variables.$background-button-none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  max-width: 22rem;
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+  color: white;
+}
+
+.btn:hover {
+  border-color: variables.$button-hover-primary;
+  color: variables.$button-hover-primary;
+  cursor: pointer;
+}
+
+.btn-github {
+  border: variables.$border-button-github;
+  height: 4rem;
+  font-weight: 900;
+  transition: transform 0.3s ease-out;
+  filter: opacity(0.999);
+  &:hover {
+    animation: button-scale 0.5s ease-in-out 0.1s forwards;
+  }
+  &:not(:hover) {
+    animation: button-scale-out-hover 0.5s ease-in-out alternate;
+  }
+}
+
+.btn-chevron-up {
+  margin-top: 5rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  background-color: #141414;
+  transition: 0.2s linear;
+  &:hover {
+    color: #fff;
+    background-color: variables.$button-hover-secondary;
+  }
 }

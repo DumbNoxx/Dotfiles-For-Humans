@@ -1,10 +1,9 @@
-import { Button } from "@atomic/index";
+import { Title } from "@atomic/index";
 
 export const Main = () => {
   return (
     <>
-      <h1>Welcome</h1>
-      <Button text="VIEW MY WORK ON GITHUB" />
+      <Title className="title-page" title="DYLAN MARCANO" />
     </>
   );
 };

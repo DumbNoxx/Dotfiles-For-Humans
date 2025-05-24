@@ -1,1 +1,1 @@
-export type { ButtonProps } from "./types/interfaces";
+export * from "./types/interfaces";
