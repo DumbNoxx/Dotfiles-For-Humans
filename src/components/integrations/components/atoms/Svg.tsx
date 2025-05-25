@@ -13,9 +13,9 @@ export const Svg = ({ nameSVG }: SvgProps) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className={`lucide lucide-${nameSVG}-icon lucide-${nameSVG} svgImg ${nameSVG}`}
           dangerouslySetInnerHTML={{ __html: svg[nameSVG] }}
         ></svg>

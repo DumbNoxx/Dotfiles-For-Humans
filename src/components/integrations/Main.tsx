@@ -1,9 +1,13 @@
-import { Title } from "@atomic/index";
+import { TitleBlock } from "@atomic/index";
 
 export const Main = () => {
   return (
     <>
-      <Title className="title-page" title="DYLAN MARCANO" />
+      <TitleBlock
+        className="title-block"
+        title="DYLAN MARCANO"
+        subTitle="WEB & MOBILE DEVELOPER"
+      />
     </>
   );
 };

@@ -18,3 +18,17 @@ export interface TitleAtom {
   title: string;
   className?: string;
 }
+
+export interface SubTitleAtomProds {
+  subTitle: string;
+  svg?: JSX.Element;
+  className?: string;
+}
+
+// Molecules
+
+export interface TitleBlockProps {
+  title: string;
+  subTitle: string;
+  className?: string;
+}

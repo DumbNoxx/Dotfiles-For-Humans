@@ -10,9 +10,15 @@
 @use "base/animations";
 
 // Components
-@use "components/button";
-@use "components/svg";
-@use "components/title";
+
+// Atoms
+@use "components/atoms/button";
+@use "components/atoms/svg";
+@use "components/atoms/title";
+@use "components/atoms/subTitle";
+
+// Molecules
+@use "components/molecules/titleBlock";
 
 // Layouts
 @use "layouts/footer";

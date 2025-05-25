@@ -1,6 +1,5 @@
-@use "../variables";
-@use "../base/animations";
-$buttons: ("github", "chevron-up");
+@use "../../variables";
+@use "../../base/animations";
 
 .btn {
   background: variables.$background-button-none;
@@ -11,12 +10,12 @@ $buttons: ("github", "chevron-up");
   align-items: center;
   padding-right: 2rem;
   color: white;
-}
 
-.btn:hover {
-  border-color: variables.$button-hover-primary;
-  color: variables.$button-hover-primary;
-  cursor: pointer;
+  &:hover {
+    border-color: variables.$button-hover-primary;
+    color: variables.$button-hover-primary;
+    cursor: pointer;
+  }
 }
 
 .btn-github {
