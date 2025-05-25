@@ -1,6 +1,6 @@
 .title {
   max-width: 30rem;
-  margin-bottom: -4rem;
+  margin-bottom: -1rem;
 }
 
 .title-page {
@@ -11,6 +11,7 @@
 @media (width >= 45rem) {
   .title {
     max-width: 60rem;
+    margin-bottom: -4rem;
   }
   .title-page {
     font-size: 6rem;

@@ -5,6 +5,7 @@ export { Title } from "./atoms/Title";
 export { SubTitle } from "./atoms/SubTitle";
 // Molecules
 export { TitleBlock } from "./molecules/TitleBlock";
+export { ButtonBlock } from "./molecules/ButtonBlock";
 // Organism
 
 // Templates

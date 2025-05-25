@@ -1,0 +1,36 @@
+.title-block {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+.block-title {
+  max-width: 60rem;
+}
+
+.chevron-down {
+  color: #575757;
+  max-width: 5rem;
+  margin: 0 auto;
+  margin-top: 25%;
+  transform: rotate(180deg);
+  animation: chevron-down-indicator 3s linear infinite;
+}
+
+@media (width >= 45rem) {
+  .block-title {
+    margin-left: 1rem;
+  }
+  .chevron-down {
+    width: 100%;
+  }
+}
+
+@media (width <= 45rem) {
+  .title-block {
+    width: 100%;
+    margin-left: 0.5rem;
+  }
+  .block-title {
+    margin-left: -1rem;
+  }
+}

@@ -30,3 +30,13 @@
     transform: scale(1.1);
   }
 }
+
+@keyframes chevron-down-indicator {
+  0%,
+  100% {
+    transform: rotate(180deg) translateY(-0.5rem);
+  }
+  50% {
+    transform: rotate(180deg) translateY(1.2rem);
+  }
+}

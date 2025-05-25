@@ -32,3 +32,8 @@ export interface TitleBlockProps {
   subTitle: string;
   className?: string;
 }
+
+export interface ButtonBlockProps {
+  text: string;
+  className?: string;
+}

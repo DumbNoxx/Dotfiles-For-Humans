@@ -1,4 +1,4 @@
-import { TitleBlock } from "@atomic/index";
+import { TitleBlock, ButtonBlock } from "@atomic/index";
 
 export const Main = () => {
   return (
@@ -8,6 +8,7 @@ export const Main = () => {
         title="DYLAN MARCANO"
         subTitle="WEB & MOBILE DEVELOPER"
       />
+      <ButtonBlock className="button-block" text="VIEW MY WORK ON GITHUB" />
     </>
   );
 };

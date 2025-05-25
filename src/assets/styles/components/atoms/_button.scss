@@ -10,7 +10,7 @@
   align-items: center;
   padding-right: 2rem;
   color: white;
-
+  margin: 0 auto;
   &:hover {
     border-color: variables.$button-hover-primary;
     color: variables.$button-hover-primary;
@@ -42,5 +42,11 @@
   &:hover {
     color: #fff;
     background-color: variables.$button-hover-secondary;
+  }
+}
+
+@media (width <= 25rem) {
+  .btn {
+    font-size: 0.5rem;
   }
 }
