@@ -1,14 +1,14 @@
-import { TitleBlock, ButtonBlock } from "@atomic/index";
+import { PageLayout } from "@atomic/index";
 
 export const Main = () => {
   return (
     <>
-      <TitleBlock
-        className="title-block"
+      <PageLayout
+        className="page-layout"
         title="DYLAN MARCANO"
         subTitle="WEB & MOBILE DEVELOPER"
+        nameSvg="chevron-down"
       />
-      <ButtonBlock className="button-block" text="VIEW MY WORK ON GITHUB" />
     </>
   );
 };

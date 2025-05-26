@@ -17,9 +17,6 @@ export const TitleBlock = ({
             subTitle={subTitle}
           />
         </div>
-        <div className="chevron-down">
-          <Svg nameSVG="chevron-up" />
-        </div>
       </section>
     </>
   );

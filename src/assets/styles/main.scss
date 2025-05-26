@@ -21,6 +21,9 @@
 @use "components/molecules/titleBlock";
 @use "components/molecules/buttonBlock";
 
+// Organism
+@use "components/organism/cardHeader";
+
 // Layouts
 @use "layouts/footer";
 @use "layouts/header";

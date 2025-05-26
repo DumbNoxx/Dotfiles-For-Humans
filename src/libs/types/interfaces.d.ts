@@ -37,3 +37,20 @@ export interface ButtonBlockProps {
   text: string;
   className?: string;
 }
+
+// Organism
+
+export interface CardHeaderProps {
+  title: string;
+  subTitle: string;
+  nameSvg: string;
+  className?: string;
+}
+
+// Templates
+export interface PageLayoutProps {
+  title: string;
+  subTitle: string;
+  nameSvg: string;
+  className?: string;
+}

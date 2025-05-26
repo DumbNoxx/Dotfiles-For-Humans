@@ -7,5 +7,7 @@ export { SubTitle } from "./atoms/SubTitle";
 export { TitleBlock } from "./molecules/TitleBlock";
 export { ButtonBlock } from "./molecules/ButtonBlock";
 // Organism
+export { CardHeader } from "./organisms/CardHeader";
 
 // Templates
+export { PageLayout } from "./templates/BaseLayout";
