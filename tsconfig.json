@@ -7,7 +7,8 @@
     "paths": {
       "@atomic/*": ["src/components/integrations/components/*"],
       "@integrations/*": ["src/components/integrations/*"],
-      "@libs/*": ["src/libs/*"]
+      "@libs/*": ["src/libs/*"],
+      "@assets/*": ["src/assets/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

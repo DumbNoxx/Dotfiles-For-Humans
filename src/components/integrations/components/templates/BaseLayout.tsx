@@ -1,4 +1,4 @@
-import { CardHeader } from "@atomic/index";
+import { CardHeader, Svg, ButtonBlock } from "@atomic/index";
 import type { PageLayoutProps } from "@libs/index";
 
 export const PageLayout = ({
@@ -15,8 +15,15 @@ export const PageLayout = ({
             className="card-header"
             title={title}
             subTitle={subTitle}
-            nameSvg={nameSvg}
           />
+        </article>
+        <article>
+          <div className="chevron-down-div">
+            <Svg nameSVG={nameSvg} />
+          </div>
+        </article>
+        <article>
+          <ButtonBlock className="button-block" text="VIEW MY WORK IN GITHUB" />
         </article>
       </div>
     </>

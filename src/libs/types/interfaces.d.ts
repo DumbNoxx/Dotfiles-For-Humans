@@ -25,6 +25,16 @@ export interface SubTitleAtomProds {
   className?: string;
 }
 
+export interface BoxIgmProps {
+  label: string;
+  img?:
+    | string
+    | File
+    | Blob
+    | DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement> | HTMLImageElement>;
+  className?: string;
+}
+
 // Molecules
 
 export interface TitleBlockProps {
@@ -43,7 +53,6 @@ export interface ButtonBlockProps {
 export interface CardHeaderProps {
   title: string;
   subTitle: string;
-  nameSvg: string;
   className?: string;
 }
 

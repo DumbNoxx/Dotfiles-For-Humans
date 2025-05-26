@@ -7,22 +7,3 @@
 .title-block-div {
   margin-top: 5rem;
 }
-
-.chevron-down-div {
-  position: relative;
-  width: 100%;
-  color: #575757;
-  margin: 0 auto;
-  margin-top: -30%;
-  animation: chevron-down-indicator 3s linear infinite;
-}
-
-@media (width >= 45rem) {
-  .chevron-down {
-    width: 100%;
-  }
-
-  .chevron-down-div {
-    margin-top: -10%;
-  }
-}

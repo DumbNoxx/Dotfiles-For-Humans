@@ -16,6 +16,7 @@
 @use "components/atoms/svg";
 @use "components/atoms/title";
 @use "components/atoms/subTitle";
+@use "components/atoms/boxImg";
 
 // Molecules
 @use "components/molecules/titleBlock";
@@ -23,6 +24,9 @@
 
 // Organism
 @use "components/organism/cardHeader";
+
+// Templates
+@use "components/templates/baseLayout";
 
 // Layouts
 @use "layouts/footer";
