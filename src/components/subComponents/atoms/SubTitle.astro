@@ -1,0 +1,9 @@
+---
+import type { SubTitleAtomProds } from "@libs/index";
+import { Svgs } from "../../widgets/react/Svg";
+const { subTitle, svgs, className = "" } = Astro.props as SubTitleAtomProds;
+---
+<div class="subTitle">
+    <Svgs nameSVG={svgs} />
+    <p class={className}>{subTitle}</p>
+</div>

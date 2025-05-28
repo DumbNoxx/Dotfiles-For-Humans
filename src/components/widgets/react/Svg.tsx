@@ -1,7 +1,7 @@
 import type { SvgProps, SvgsJson } from "@libs/index";
 import { svgsJson } from "@libs/json";
 
-export const Svg = ({ nameSVG }: SvgProps) => {
+export const Svgs = ({ nameSVG }: SvgProps) => {
   const svg: SvgsJson = svgsJson;
   return (
     <>

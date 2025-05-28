@@ -1,0 +1,9 @@
+---
+import {Title, SubTitle} from "src/components/subComponents/index";
+import type { CardHeaderProps } from "@libs/index";
+const {title, subTitle} = Astro.props as CardHeaderProps;
+---
+<div class="block-title">
+    <Title title={title} className="title-page" />
+    <SubTitle subTitle={subTitle} svgs="check-line" className="subTitle-page" /> 
+</div>

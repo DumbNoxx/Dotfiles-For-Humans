@@ -1,4 +1,8 @@
-import { CardHeader, Svg, ButtonBlock } from "@atomic/index";
+import {
+  CardHeader,
+  Svg,
+  ButtonBlock,
+} from "src/components/subComponents/index";
 import type { PageLayoutProps } from "@libs/index";
 
 export const PageLayout = ({

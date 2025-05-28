@@ -4,6 +4,7 @@ export interface ButtonProps {
   text?: string;
   svg?: JSX.element;
   className?: string;
+  href: string;
 }
 
 export interface SvgProps {
@@ -21,7 +22,7 @@ export interface TitleAtom {
 
 export interface SubTitleAtomProds {
   subTitle: string;
-  svg?: JSX.Element;
+  svgs?: JSX.Element;
   className?: string;
 }
 
@@ -35,24 +36,16 @@ export interface BoxIgmProps {
   className?: string;
 }
 
-// Molecules
-
-export interface TitleBlockProps {
-  title: string;
-  subTitle: string;
-  className?: string;
-}
-
-export interface ButtonBlockProps {
-  text: string;
-  className?: string;
-}
-
-// Organism
-
 export interface CardHeaderProps {
   title: string;
   subTitle: string;
+  className?: string;
+}
+
+// Molecules
+
+export interface ButtonBlockProps {
+  text: string;
   className?: string;
 }
 
@@ -62,4 +55,5 @@ export interface PageLayoutProps {
   subTitle: string;
   nameSvg: string;
   className?: string;
+  textButton: string;
 }

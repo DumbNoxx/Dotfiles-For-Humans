@@ -1,0 +1,9 @@
+---
+import { ButtonBlock } from "@atomic/index";
+import type { ButtonBlockProps } from "@libs/index";
+const { text, className = ""} = Astro.props as ButtonBlockProps;
+---
+<section class={className}>
+    <ButtonBlock text={text} className="button-block" />
+</section>
+

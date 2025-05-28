@@ -5,10 +5,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@atomic/*": ["src/components/integrations/components/*"],
-      "@integrations/*": ["src/components/integrations/*"],
+      "@atomic/*": ["src/components/subComponents/*"],
       "@libs/*": ["src/libs/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@widget/*": ["src/components/widgets/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

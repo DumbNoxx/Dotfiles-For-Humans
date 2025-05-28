@@ -1,0 +1,22 @@
+---
+import { CardHeader, CardProjects, Svgs } from "@atomic/index";
+import type { PageLayoutProps } from "@libs/index";
+const {title, subTitle, nameSvg,textButton } = Astro.props as PageLayoutProps;
+---
+<div>
+    <article class="card-header">
+        <CardHeader title={title} subTitle={subTitle} />
+    </article>
+    <article>
+        <div class="chevron-down-div">
+          <Svgs nameSVG={nameSvg} />
+        </div>
+      </article>
+    <article>
+        <CardProjects text={textButton} className="cardProjects" />
+    </article>
+</div>
+
+<style>
+
+</style>
