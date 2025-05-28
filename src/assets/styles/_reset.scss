@@ -4,4 +4,5 @@
 *::before,
 *::after {
   box-sizing: variables.$box-predecible;
+  scroll-behavior: variables.$box-predecible;
 }
