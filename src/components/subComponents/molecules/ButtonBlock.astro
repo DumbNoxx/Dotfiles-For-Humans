@@ -1,21 +1,22 @@
 ---
-import { BoxImg, Button } from "@atomic/index";
+import { BoxImg } from "@atomic/index";
+import { Button } from "@widget/index";
 import type { ButtonBlockProps } from "@libs/index";
 import { creatureCodex, cashRegister, phoneValidator } from "@assets/index";
 const {text, className = ""} = Astro.props as ButtonBlockProps;
 ---
 <div class={className}>
-    <div class="button-github">
-        <Button
-          href="https://github.com/dumbnoxx?tab=repositories"
-          className="btn-github"
-          svg="github"
-          text={text}
-        />
-      </div>
-      <div class="block-projects">
-        <BoxImg label="Number Validator" img={phoneValidator} className="project" />
-        <BoxImg label="Cash Register" img={cashRegister} className="project" />
-        <BoxImg label="Creature Codex" img={phoneValidator} className="project" />
-      </div>
+  <div class="button-github">
+    <Button
+      href="https://github.com/dumbnoxx?tab=repositories"
+      className="btn-github"
+      svg="github"
+      text={text}
+    />
+  </div>
+  <div class="block-projects">
+    <BoxImg label="Number Validator" img={phoneValidator} className="project" />
+    <BoxImg label="Cash Register" img={cashRegister} className="project" />
+    <BoxImg label="Creature Codex" img={creatureCodex} className="project" />
+  </div>
 </div>

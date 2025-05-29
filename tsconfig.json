@@ -8,7 +8,9 @@
       "@atomic/*": ["src/components/subComponents/*"],
       "@libs/*": ["src/libs/*"],
       "@assets/*": ["src/assets/*"],
-      "@widget/*": ["src/components/widgets/*"]
+      "@widget/*": ["src/components/widgets/*"],
+      "@layout/*": ["src/layouts/*"],
+      "@components/*": ["src/components/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

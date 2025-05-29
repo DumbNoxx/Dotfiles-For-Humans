@@ -4,7 +4,7 @@ export interface ButtonProps {
   text?: string;
   svg?: JSX.element;
   className?: string;
-  href: string;
+  href?: string;
 }
 
 export interface SvgProps {

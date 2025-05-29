@@ -6,7 +6,8 @@ article:nth-child(2) {
   height: 25vh;
 }
 @media (width >= 90rem) {
-  article:nth-child(2) {
+  article:nth-child(2),
+  article:nth-child(3) {
     height: 76vh;
   }
 }

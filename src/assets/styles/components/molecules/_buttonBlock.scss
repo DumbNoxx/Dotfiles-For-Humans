@@ -14,8 +14,8 @@
 
 .project {
   position: relative;
-  width: 450px;
-  height: 500px;
+  width: 312px;
+  height: 312px;
 }
 
 .project figure {
@@ -51,6 +51,10 @@
 @media (width >= 45rem) {
   .button-github {
     margin-left: 0.5rem;
+  }
+
+  .block-projects {
+    padding-left: 9rem;
   }
 }
 

@@ -1,5 +1,5 @@
 import type { ButtonProps } from "@libs/index";
-import { Svgs } from "@atomic/index";
+import { Svgs } from "@widget/index";
 
 export const Button = ({ text, svg, className = "", href }: ButtonProps) => {
   return (

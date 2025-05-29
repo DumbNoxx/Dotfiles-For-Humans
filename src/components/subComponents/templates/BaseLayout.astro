@@ -1,5 +1,6 @@
 ---
-import { CardHeader, CardProjects, Svgs } from "@atomic/index";
+import { CardHeader, CardProjects, TextExp } from "@atomic/index";
+import { Svgs } from "@widget/index";
 import type { PageLayoutProps } from "@libs/index";
 const {title, subTitle, nameSvg,textButton } = Astro.props as PageLayoutProps;
 ---
@@ -12,8 +13,11 @@ const {title, subTitle, nameSvg,textButton } = Astro.props as PageLayoutProps;
           <Svgs nameSVG={nameSvg} />
         </div>
       </article>
-    <article>
+    <article class="card-projects">
         <CardProjects text={textButton} className="cardProjects" />
+    </article>
+    <article>
+      <TextExp title="Building digital experiences that merge form and function." className="text-exp" />
     </article>
 </div>
 
