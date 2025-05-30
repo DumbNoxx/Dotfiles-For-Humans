@@ -2,10 +2,10 @@
 import { CardHeader, CardProjects, TextExp } from "@atomic/index";
 import { Svgs } from "@widget/index";
 import type { PageLayoutProps } from "@libs/index";
-const {title, subTitle, nameSvg,textButton } = Astro.props as PageLayoutProps;
+const { title, subTitle, nameSvg,textButton } = Astro.props as PageLayoutProps;
 ---
 <div>
-    <article class="card-header">
+    <article class="card-header" id="cardHeader">
         <CardHeader title={title} subTitle={subTitle} />
     </article>
     <article>
@@ -20,7 +20,3 @@ const {title, subTitle, nameSvg,textButton } = Astro.props as PageLayoutProps;
       <TextExp title="Building digital experiences that merge form and function." className="text-exp" />
     </article>
 </div>
-
-<style>
-
-</style>

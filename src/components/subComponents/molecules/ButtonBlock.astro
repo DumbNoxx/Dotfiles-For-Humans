@@ -14,9 +14,11 @@ const {text, className = ""} = Astro.props as ButtonBlockProps;
       text={text}
     />
   </div>
-  <div class="block-projects">
+  <div class="block">
+    <div class="block-projects">
     <BoxImg label="Number Validator" img={phoneValidator} className="project" />
     <BoxImg label="Cash Register" img={cashRegister} className="project" />
     <BoxImg label="Creature Codex" img={creatureCodex} className="project" />
+    </div>
   </div>
 </div>

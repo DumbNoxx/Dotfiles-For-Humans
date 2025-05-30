@@ -4,7 +4,7 @@ export interface ButtonProps {
   text?: string;
   svg?: JSX.element;
   className?: string;
-  href?: string;
+  href?: string | undefined;
 }
 
 export interface SvgProps {
@@ -57,3 +57,10 @@ export interface PageLayoutProps {
   className?: string;
   textButton: string;
 }
+
+// Types
+export type UseVisibilityTriggerOptions = {
+  elementId: string;
+  rootMargin?: string;
+  threshold?: number;
+};

@@ -4,7 +4,7 @@ import type { CardHeaderProps } from "@libs/index";
 const { title, subTitle} = Astro.props as CardHeaderProps;
 ---
 <section class="title-block-div">
-    <div class="title-block">
+    <div class="title-block" id="titleBlock">
         <TitleBlock title={title} subTitle={subTitle} />
     </div>
 </section>

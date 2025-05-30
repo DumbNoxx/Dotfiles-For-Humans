@@ -1,7 +1,11 @@
 article {
-  height: 45vh;
-  margin-bottom: 10px;
+  height: 60vh;
+  margin-bottom: 5rem;
 }
+article:first-child {
+  margin-top: -6rem;
+}
+
 article:nth-child(2) {
   height: 25vh;
 }
