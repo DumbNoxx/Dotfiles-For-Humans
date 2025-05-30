@@ -1,0 +1,11 @@
+---
+import { TextExp,DetailsExp } from "@atomic/index";
+import type { DetailsBlockProps } from "@libs/index";
+const { title, summary, text, 
+        text2, svg, className = "", 
+        className2 = "" } = Astro.props as DetailsBlockProps;
+---
+<div>
+    <TextExp title={title} className={className} />
+    <DetailsExp summary={summary} text={text} text2={text2} svg={svg} className={className2}/>
+</div>

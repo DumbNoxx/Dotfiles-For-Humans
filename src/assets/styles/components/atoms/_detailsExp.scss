@@ -1,0 +1,17 @@
+.details-title::-webkit-details-marker {
+  display: none;
+}
+
+.details-title::marker {
+  display: none;
+  content: "";
+}
+
+.details-title {
+  display: flex;
+  align-items: center;
+}
+
+.details-title svg {
+  margin-top: 0.3rem;
+}

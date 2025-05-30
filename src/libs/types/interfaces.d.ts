@@ -11,6 +11,14 @@ export interface SvgProps {
   nameSVG: string;
 }
 
+export interface DetailsProps {
+  summary: string;
+  text: string;
+  text2?: string;
+  svg: string;
+  className?: string;
+}
+
 export interface SvgsJson {
   [key: string]: string;
 }
@@ -47,6 +55,10 @@ export interface CardHeaderProps {
 export interface ButtonBlockProps {
   text: string;
   className?: string;
+}
+export interface DetailsBlockProps extends DetailsProps {
+  title: string;
+  className2?: string;
 }
 
 // Templates

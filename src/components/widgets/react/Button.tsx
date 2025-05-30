@@ -6,8 +6,8 @@ export const Button = ({ text, svg, className = "", href }: ButtonProps) => {
     <>
       <a
         href={href}
-        aria-label={`${text ? text : "Top button"}`}
-        target={`${href?.startsWith("#") ? "" : "_blank"}`}
+        aria-label={text ? text : "Top button"}
+        target={href?.startsWith("#") ? "" : "_blank"}
         className={`btn ${className}`}
       >
         <Svgs nameSVG={svg} /> {text}

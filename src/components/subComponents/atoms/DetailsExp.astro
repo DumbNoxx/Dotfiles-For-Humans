@@ -1,0 +1,11 @@
+---
+import type { DetailsProps } from "@libs/index";
+import { Svgs } from "@widget/index";
+const { summary, text, text2, svg, className = "" } = Astro.props as DetailsProps;
+---
+<details class={className}>
+  <summary class="details-title">{summary} <Svgs nameSVG={svg} /></summary>
+  <p>{text}</p>
+  <br />
+  <p>{text2}</p>
+</details>
