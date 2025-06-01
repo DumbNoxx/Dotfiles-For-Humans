@@ -10,7 +10,7 @@ export const Button = ({ text, svg, className = "", href }: ButtonProps) => {
         target={href?.startsWith("#") ? "" : "_blank"}
         className={`btn ${className}`}
       >
-        <Svgs nameSVG={svg} /> {text}
+        <Svgs nameSVG={svg} className={svg} /> {text}
       </a>
     </>
   );

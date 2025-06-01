@@ -1,5 +1,5 @@
 ---
-import { TextExp,DetailsExp } from "@atomic/index";
+import { TextExp, DetailsExp } from "@atomic/index";
 import type { DetailsBlockProps } from "@libs/index";
 const { title, summary, text, 
         text2, svg, className = "", 
@@ -7,5 +7,7 @@ const { title, summary, text,
 ---
 <div>
     <TextExp title={title} className={className} />
-    <DetailsExp summary={summary} text={text} text2={text2} svg={svg} className={className2}/>
+    <div class="div-details">
+      <DetailsExp summary={summary} text={text} text2={text2} svg={svg} className={className2}/>
+    </div>
 </div>

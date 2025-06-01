@@ -21,7 +21,7 @@
     transform: scale(1.1);
   }
   70% {
-    trasnform: scale(1.08);
+    transform: scale(1.08);
   }
   85% {
     transform: scale(1.09);
@@ -61,5 +61,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes rotate-click-open {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, type RefObject } from "react";
+import { useState, useEffect } from "react";
 import type { UseVisibilityTriggerOptions } from "@libs/index";
 
 export const useVisibilityTrigger = ({
@@ -6,7 +6,7 @@ export const useVisibilityTrigger = ({
   rootMargin = "0px",
   threshold = 0,
 }: UseVisibilityTriggerOptions): boolean => {
-  const [showButton, setShowButton] = useState(false);
+  const [showButtonTop, setShowButtonTop] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -15,7 +15,7 @@ export const useVisibilityTrigger = ({
     if (!target) return;
 
     const observer = new IntersectionObserver(([entry]) => {
-      setShowButton(!entry.isIntersecting);
+      setShowButtonTop(!entry.isIntersecting);
     });
 
     observer.observe(target);
@@ -25,5 +25,5 @@ export const useVisibilityTrigger = ({
     };
   }, [elementId, rootMargin, threshold]);
 
-  return showButton;
+  return showButtonTop;
 };

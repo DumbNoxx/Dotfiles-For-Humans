@@ -1,11 +1,22 @@
 ---
 import { ExpBlock } from "@atomic/index";
+import { ShowMore } from "@widget/index";
 ---
 <section>
-    <ExpBlock 
-    title="Building digital experiences that merge form and function." 
-    summary="Test" 
-    text="test" 
+    <ShowMore client:load 
+    title="BACKGROUND"
+     details="Test"
+      id="BACKGROUND" 
+      idText="backText" 
+      svg="chevron-down" 
+      className="btn-show-more" 
+      />
+    <ShowMore client:load 
+    title="EXPERTISE" 
+    details="Test" 
+    id="EXPERTISE" 
+    idText="ExpText" 
     svg="chevron-down" 
-    className="text-exp" />
+    className="btn-show-more" />
+
 </section>

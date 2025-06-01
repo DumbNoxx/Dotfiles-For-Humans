@@ -9,6 +9,7 @@ export interface ButtonProps {
 
 export interface SvgProps {
   nameSVG: string;
+  className?: string;
 }
 
 export interface DetailsProps {
@@ -76,3 +77,14 @@ export type UseVisibilityTriggerOptions = {
   rootMargin?: string;
   threshold?: number;
 };
+
+// Widgets
+export interface ShowMoreProps {
+  title: string;
+  details: string;
+  details2?: string;
+  svg: string;
+  className?: string;
+  id: string;
+  idText: string;
+}
