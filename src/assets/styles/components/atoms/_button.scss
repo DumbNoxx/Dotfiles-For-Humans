@@ -12,6 +12,7 @@
   padding-right: 2rem;
   color: white;
   margin: 0 auto;
+
   &:hover {
     border-color: variables.$button-hover-primary;
     color: variables.$button-hover-primary;
@@ -22,12 +23,15 @@
 .btn-github {
   border: variables.$border-button-github;
   height: 4rem;
+  gap: 2rem;
   font-weight: 900;
   transition: transform 0.3s ease-out;
   filter: opacity(0.999);
+
   &:hover {
     animation: button-scale 0.5s ease-in-out 0.1s forwards;
   }
+
   &:not(:hover) {
     animation: button-scale-out-hover 0.5s ease-in-out alternate;
   }
@@ -54,7 +58,8 @@
     color: #fff;
   }
 
-  &.out {
+  & .visible {
+    color: red;
     transform: translateY(20%);
     opacity: 0;
     visibility: hidden;
@@ -62,10 +67,11 @@
   }
 }
 
-@media (width <= 25rem) {
+@media (width <=25rem) {
   .btn {
     font-size: 0.5rem;
   }
+
   .btn-chevron-up {
     display: none;
   }

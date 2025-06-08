@@ -1,22 +1,39 @@
 ---
-import { ExpBlock } from "@atomic/index";
 import { ShowMore } from "@widget/index";
+import type { CardExpProps } from "@libs/index";
+const { title1, title2, title3, className = "" } = Astro.props as CardExpProps;
 ---
-<section>
-    <ShowMore client:load 
-    title="BACKGROUND"
-     details="Test"
-      id="BACKGROUND" 
-      idText="backText" 
-      svg="chevron-down" 
-      className="btn-show-more" 
-      />
-    <ShowMore client:load 
-    title="EXPERTISE" 
-    details="Test" 
-    id="EXPERTISE" 
+<section class={className}>
+ <div class="container">
+  <div>
+   <ShowMore client:load
+    title={title1}
+    details="Test"
+    id={title1} 
+    idText="backText" 
+    svg="chevron-down" 
+    className="btn-show-more" 
+   />
+  </div>
+  <div>
+   <ShowMore client:load 
+    title={title2} 
+    details="Tes" 
+    id={title2} 
     idText="ExpText" 
     svg="chevron-down" 
-    className="btn-show-more" />
-
+    className="btn-show-more"
+   />
+  </div>
+  <div>
+   <ShowMore client:load
+    title={title3}
+    details="tes"
+    id={title3}
+    idText="aproText"
+    svg="chevron-down"
+    className="btn-show-more"
+   /> 
+  </div>   
+ </div>
 </section>

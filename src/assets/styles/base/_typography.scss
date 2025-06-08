@@ -2,7 +2,7 @@
 @use "../variables";
 
 body {
-  font-family: variables.$font-primary;
+  font-family: variables.$font-primary !important;
   font-size: map.get(variables.$font-sizes, "base");
 }
 

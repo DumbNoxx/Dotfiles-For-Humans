@@ -7,7 +7,6 @@ export const useStylesQuit = (elementId: string, elementId2: string) => {
 
     const target = document.getElementById(elementId);
     const textDetail = document.getElementById(elementId2);
-    console.log(textDetail);
     if (!target) return;
     if (openDetails) {
       target.classList.toggle("open");

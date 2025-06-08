@@ -1,29 +1,31 @@
-import { useState, useEffect } from "react";
-import type { UseVisibilityTriggerOptions } from "@libs/index";
+import { useEffect, useRef } from "react";
 
-export const useVisibilityTrigger = ({
-  elementId,
-  rootMargin = "0px",
-  threshold = 0,
-}: UseVisibilityTriggerOptions): boolean => {
-  const [showButtonTop, setShowButtonTop] = useState(false);
-
+export const useVisibilityTrigger = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLAnchorElement | null>(null);
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const target = document.getElementById(elementId);
-    if (!target) return;
-
-    const observer = new IntersectionObserver(([entry]) => {
-      setShowButtonTop(!entry.isIntersecting);
-    });
-
-    observer.observe(target);
-
+    setTimeout(() => {
+      console.log(buttonRef.current);
+      buttonRef.current?.classList.add("visible");
+    }, 3000)
+    const handleScroll = () => {
+      if (!targetRef.current?.offsetTop) return;
+      console.log("Ahora, este es la etiqueta a: ", buttonRef.current);
+      if (window.pageYOffset >= targetRef.current.offsetTop) {
+        buttonRef.current?.classList.add("visible")
+      } else {
+        buttonRef.current?.classList.remove("visible");
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      observer.disconnect();
-    };
-  }, [elementId, rootMargin, threshold]);
+      window.removeEventListener("scroll", handleScroll);
+    }
 
-  return showButtonTop;
+  });
+
+  return {
+    targetRef,
+    buttonRef
+  };
 };

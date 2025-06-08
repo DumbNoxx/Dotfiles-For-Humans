@@ -7,17 +7,19 @@
   max-width: 60rem;
 }
 
-@media (width >= 45rem) {
+@media (width >=45rem) {
   .block-title {
     margin-left: 7rem;
   }
 }
 
-@media (width <= 45rem) {
+@media (width <=45rem) {
   .title-block {
     width: 100%;
     margin-left: 0.5rem;
+    margin-top: 20rem;
   }
+
   .block-title {
     margin-left: -1rem;
   }

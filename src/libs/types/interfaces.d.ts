@@ -5,6 +5,7 @@ export interface ButtonProps {
   svg?: JSX.element;
   className?: string;
   href?: string | undefined;
+  ref?: React.RefObject;
 }
 
 export interface SvgProps {
@@ -38,10 +39,10 @@ export interface SubTitleAtomProds {
 export interface BoxIgmProps {
   label: string;
   img?:
-    | string
-    | File
-    | Blob
-    | DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement> | HTMLImageElement>;
+  | string
+  | File
+  | Blob
+  | DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement> | HTMLImageElement>;
   className?: string;
 }
 
@@ -62,6 +63,13 @@ export interface DetailsBlockProps extends DetailsProps {
   className2?: string;
 }
 
+export interface CardExpProps {
+  title1: string;
+  title2: string;
+  title3: string;
+  className?: string;
+}
+
 // Templates
 export interface PageLayoutProps {
   title: string;
@@ -69,6 +77,9 @@ export interface PageLayoutProps {
   nameSvg: string;
   className?: string;
   textButton: string;
+  titleBack: string;
+  titleExp: string;
+  titleApro: string;
 }
 
 // Types

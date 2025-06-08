@@ -1,0 +1,12 @@
+.card-exp {
+  max-height: 60rem;
+  height: 30rem;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 20rem;
+  }
+
+}
