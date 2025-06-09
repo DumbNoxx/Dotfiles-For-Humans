@@ -1,39 +1,12 @@
 ---
-import { ShowMore } from "@widget/index";
+import { ExpShowMore } from "@widget/index";
 import type { CardExpProps } from "@libs/index";
 const { title1, title2, title3, className = "" } = Astro.props as CardExpProps;
 ---
 <section class={className}>
  <div class="container">
-  <div>
-   <ShowMore client:load
-    title={title1}
-    details="Test"
-    id={title1} 
-    idText="backText" 
-    svg="chevron-down" 
-    className="btn-show-more" 
-   />
-  </div>
-  <div>
-   <ShowMore client:load 
-    title={title2} 
-    details="Tes" 
-    id={title2} 
-    idText="ExpText" 
-    svg="chevron-down" 
-    className="btn-show-more"
-   />
-  </div>
-  <div>
-   <ShowMore client:load
-    title={title3}
-    details="tes"
-    id={title3}
-    idText="aproText"
-    svg="chevron-down"
-    className="btn-show-more"
-   /> 
-  </div>   
+  <ExpShowMore title={title1}
+  details="Hola a todos"
+  details2="Hola a todos de nuevo"/>
  </div>
 </section>

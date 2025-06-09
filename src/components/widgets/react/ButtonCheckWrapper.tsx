@@ -9,7 +9,7 @@ export const ButtonCheckWrapper = ({ reference }: ButtonCheckWrapperProps) => {
         reference={reference}
         href="#cardHeader"
         svg="chevron-up"
-        className={`btn-chevron-up`}
+        className={`btn-chevron-up hidden`}
       />
     </>
   );

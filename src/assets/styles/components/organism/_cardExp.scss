@@ -1,8 +1,8 @@
 .card-exp {
-  max-height: 60rem;
-  height: 30rem;
+  max-width: 60rem;
 
   & .container {
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     gap: 2rem;

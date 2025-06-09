@@ -94,10 +94,9 @@ export interface ShowMoreProps {
   title: string;
   details: string;
   details2?: string;
-  svg: string;
   className?: string;
-  id: string;
-  idText: string;
+  id?: string;
+  idText?: string;
 }
 
 export interface ButtonCheckWrapperProps {
