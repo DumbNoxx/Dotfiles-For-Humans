@@ -5,7 +5,7 @@ export interface ButtonProps {
   svg?: JSX.element;
   className?: string;
   href?: string | undefined;
-  ref?: React.RefObject;
+  reference?: React.RefObject;
 }
 
 export interface SvgProps {
@@ -98,4 +98,8 @@ export interface ShowMoreProps {
   className?: string;
   id: string;
   idText: string;
+}
+
+export interface ButtonCheckWrapperProps {
+  reference?: React.RefObject;
 }

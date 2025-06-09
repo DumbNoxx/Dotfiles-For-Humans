@@ -1,13 +1,12 @@
-import { useVisibilityTrigger } from "@libs/client";
+import type { ButtonCheckWrapperProps } from "@libs/index";
 import { Button } from "@widget/index";
 
-export const ButtonCheckWrapper = () => {
-  const { buttonRef } = useVisibilityTrigger();
+export const ButtonCheckWrapper = ({ reference }: ButtonCheckWrapperProps) => {
 
   return (
     <>
       <Button
-        ref={buttonRef}
+        reference={reference}
         href="#cardHeader"
         svg="chevron-up"
         className={`btn-chevron-up`}

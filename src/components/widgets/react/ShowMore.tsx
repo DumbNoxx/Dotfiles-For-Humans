@@ -24,7 +24,7 @@ export const ShowMore = ({
           <Svgs nameSVG={svg} />
         </span>
       </button>
-      <div className="text-details" id={idText}>
+      <div className="text-description text-details" id={idText}>
         <p>
           {details}
           <br />

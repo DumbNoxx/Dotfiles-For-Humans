@@ -1,12 +1,12 @@
 ---
 import { CardHeader, CardProjects, CardExp } from "@atomic/index";
 import { CardHeaderRef, Svgs } from "@widget/index";
-import type { PageLayoutProps, UseVisibilityTriggerOptions } from "@libs/index";
-const { title, subTitle, nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as PageLayoutProps;
+import type { PageLayoutProps } from "@libs/index";
+const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as PageLayoutProps;
 ---
 <div>
- <article class="card-header">
-  <CardHeader title="DYLAN MARCANO" subTitle="ksdfjakdlsfj" />
+ <article class="card-header" id="cardHeader">
+  <CardHeader title="DYLAN MARCANO" subTitle="WEB & MOBILE DEVELOPER" />
   <CardHeaderRef client:load/>
  </article>
  <article>

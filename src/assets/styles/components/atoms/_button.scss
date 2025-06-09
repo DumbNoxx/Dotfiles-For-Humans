@@ -39,7 +39,7 @@
 
 .btn-chevron-up {
   position: fixed;
-  top: 91.8%;
+  top: 91%;
   left: 96%;
   width: 3rem;
   height: 3rem;
@@ -58,8 +58,7 @@
     color: #fff;
   }
 
-  & .visible {
-    color: red;
+  &.hidden {
     transform: translateY(20%);
     opacity: 0;
     visibility: hidden;
