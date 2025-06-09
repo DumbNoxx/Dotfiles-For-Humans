@@ -4,6 +4,7 @@ export const useVisibilityTrigger = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLAnchorElement | null>(null);
 
+  // UseCallback 
   const handleScroll = useCallback(() => {
     const button = buttonRef.current;
     const target = targetRef.current;
