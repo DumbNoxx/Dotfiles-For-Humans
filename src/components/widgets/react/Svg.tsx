@@ -1,7 +1,7 @@
 import type { SvgProps, SvgsJson } from "@libs/index";
 import { svgsJson } from "@libs/json";
 
-export const Svgs = ({ nameSVG, className = "" }: SvgProps) => {
+export const Svgs = ({ nameSVG, className = "", reference }: SvgProps) => {
   const svg: SvgsJson = svgsJson;
   return (
     <>
@@ -18,6 +18,7 @@ export const Svgs = ({ nameSVG, className = "" }: SvgProps) => {
           strokeLinejoin="round"
           className={`lucide lucide-${nameSVG}-icon lucide-${nameSVG} svgImg ${className}`}
           dangerouslySetInnerHTML={{ __html: svg[nameSVG] }}
+          ref={reference}
         ></svg>
       </figure>
     </>

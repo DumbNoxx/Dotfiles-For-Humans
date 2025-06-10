@@ -1,11 +1,6 @@
+@use "../../_variables.scss";
+
 .card-exp {
   max-width: 60rem;
-
-  & .container {
-    border: 2px solid red;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    height: 20rem;
-  }
+  margin: 0 auto;
 }

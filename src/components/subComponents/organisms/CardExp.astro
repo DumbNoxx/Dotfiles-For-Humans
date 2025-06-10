@@ -8,6 +8,8 @@ const { title1, title2, title3, className = "" } = Astro.props as CardExpProps;
   <ExpShowMore title={title1}
   details="Hola a todos"
   details2="Hola a todos de nuevo"
+  className="text-wrap active"
+  client:load
   />
  </div>
 </section>

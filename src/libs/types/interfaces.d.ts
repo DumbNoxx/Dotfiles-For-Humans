@@ -11,6 +11,7 @@ export interface ButtonProps {
 export interface SvgProps {
   nameSVG: string;
   className?: string;
+  reference?: React.RefObject;
 }
 
 export interface DetailsProps {

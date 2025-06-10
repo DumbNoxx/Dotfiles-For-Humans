@@ -1,0 +1,57 @@
+@use "../../_variables.scss";
+
+.text-wrap {
+  max-width: 50rem;
+  width: 25rem;
+  border-bottom: 2px solid gray;
+  transition: all 3s ease-in-out;
+}
+
+.btn-exp-show-more {
+  background-color: variables.$background-primary;
+  color: variables.$text-color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s linear;
+
+  & span.container-svg svg {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.1rem;
+    margin-right: -4rem;
+    transform: rotate(0);
+    transition: transform 0.7s linear 0.3s, fill 0.3s linear;
+
+  }
+
+  & span.open svg {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    color: variables.$button-hover-primary;
+    text-decoration: underline;
+  }
+
+}
+
+
+
+.container-details {
+  padding-left: 2rem;
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 2rem;
+  transition: max-height 0.7s ease-in-out 0.3s;
+
+  &.visible {
+    max-height: 20rem;
+    opacity: 1;
+  }
+
+}

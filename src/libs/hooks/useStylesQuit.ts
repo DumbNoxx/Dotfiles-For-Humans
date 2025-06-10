@@ -1,20 +1,31 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
-export const useStylesQuit = (elementId: string, elementId2: string) => {
-  const [openDetails, setOpenDetails] = useState(false);
+export const useStylesQuit = () => {
+  const targetButtonRef = useRef<HTMLButtonElement | null>(null);
+  const svgTargetRef = useRef<HTMLSpanElement | null>(null);
+  const textRef = useRef<HTMLDivElement | null>(null);
+  console.log(targetButtonRef.current, svgTargetRef.current, textRef.current)
+  const handleClick = useCallback(() => {
+    const svg = svgTargetRef.current;
+    const textDiv = textRef.current;
+    if (!(textDiv && svg)) return;
+    console.log("hola")
+    textDiv.classList.toggle("visible")
+    svg.classList.toggle("open");
+  }, []);
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    const button = targetButtonRef.current;
+    if (!button) return;
+    button.addEventListener("click", handleClick);
+    return () => button.removeEventListener("click", handleClick);
+  }, [handleClick]);
 
-    const target = document.getElementById(elementId);
-    const textDetail = document.getElementById(elementId2);
-    if (!target) return;
-    if (openDetails) {
-      target.classList.toggle("open");
-      textDetail?.classList.toggle("text-visible");
-    }
-  }, [openDetails]);
+  useEffect(() => {
+    console.log("Refs after mount:", { targetButtonRef, svgTargetRef, textRef })
+  }, [])
   return {
-    openDetails,
-    setOpenDetails,
-  };
+    targetButtonRef,
+    svgTargetRef,
+    textRef
+  }
 };
