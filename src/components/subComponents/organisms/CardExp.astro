@@ -2,24 +2,23 @@
 import { ExpShowMore } from "@widget/index";
 import type { CardExpProps } from "@libs/index";
 const { title1, title2, title3, className = "" } = Astro.props as CardExpProps;
+import { detailsText } from "@libs/json/index";
 ---
 <section class={className}>
  <div class="container">
   <ExpShowMore title={title1}
-  details="Hola a todos"
-  details2="Hola a todos de nuevo"
+  details={detailsText["background1"]}
+  details2={detailsText["background2"]}
   className="text-wrap active"
   client:load
   />
   <ExpShowMore title={title2}
-  details="Hola a todos"
-  details2="Hola a todos de nuevo"
+  mapeo={detailsText["expertise"]}
   className="text-wrap active"
   client:load
   />
   <ExpShowMore title={title3}
-  details="Hola a todos"
-  details2="Hola a todos de nuevo"
+  details={detailsText["aproach"]}
   className="text-wrap active"
   client:load
   />

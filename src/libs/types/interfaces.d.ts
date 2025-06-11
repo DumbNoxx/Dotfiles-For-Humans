@@ -93,11 +93,12 @@ export type UseVisibilityTriggerOptions = {
 // Widgets
 export interface ShowMoreProps {
   title: string;
-  details: string;
+  details?: string;
   details2?: string;
   className?: string;
   id?: string;
   idText?: string;
+  mapeo?: string[];
 }
 
 export interface ButtonCheckWrapperProps {
