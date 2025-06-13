@@ -1,4 +1,4 @@
-@use "../../base/animations";
+@use "@assets/styles/base/animations";
 
 .button-block {
   max-width: 80rem;
@@ -54,7 +54,7 @@
   margin-top: 2rem;
 }
 
-@media (width >= 45rem) {
+@media (width >=45rem) {
   .button-github {
     margin-left: 0.5rem;
   }
@@ -64,16 +64,18 @@
   }
 }
 
-@media (width <= 30rem) {
+@media (width <=30rem) {
   .project {
     width: 100%;
     height: 100%;
   }
+
   .block-projects {
     margin: 0 auto;
     margin-top: 2rem;
     flex-direction: column;
   }
+
   .button-github {
     padding-right: 0;
   }

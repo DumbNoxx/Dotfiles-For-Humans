@@ -4,6 +4,6 @@
 *::before,
 *::after {
   box-sizing: variables.$box-predecible;
-  scroll-behavior: variables.$box-predecible;
+  scroll-behavior: variables.$scroll-smooth;
   font-family: variables.$font-primary !important;
 }

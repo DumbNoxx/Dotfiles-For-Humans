@@ -2,6 +2,7 @@ article {
   height: 60vh;
   margin-bottom: 5rem;
 }
+
 article:first-child {
   margin-top: -6rem;
 }
@@ -9,12 +10,11 @@ article:first-child {
 article:nth-child(2) {
   height: 25vh;
 }
-@media (width >= 90rem) {
-  article:nth-child(2),
-  article:nth-child(3) {
-    height: 76vh;
-  }
+
+article:nth-child(3) {
+  height: 80vh;
 }
+
 
 .chevron-down-div {
   position: relative;
@@ -22,4 +22,68 @@ article:nth-child(2) {
   color: #575757;
   margin: 0 auto;
   animation: chevron-down-indicator 3s linear infinite;
+}
+
+footer {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+
+  & div:first-child {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+
+    & a {
+      width: 5rem;
+      height: 3rem;
+      border-radius: 0;
+      padding-right: 7rem;
+      transition: 0.3s linear;
+      border: 0;
+
+      & svg {
+        width: 2rem;
+      }
+
+      &:hover {
+        transform: scale(2)
+      }
+    }
+
+    & .github {
+      margin-top: -1.3rem;
+    }
+  }
+
+  & div:nth-child(2) {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 6px;
+    text-align: center;
+  }
+
+}
+
+@media(width <=30rem) {
+  article:nth-child(3) {
+    height: 170vh;
+  }
+
+  footer div:first-child {
+    & a {
+      margin-left: 0.3rem;
+    }
+
+    width: 1rem;
+  }
+}
+
+@media (width >=90rem) {
+
+  article:nth-child(2),
+  article:nth-child(3),
+  article:nth-child(4) {
+    height: 76vh;
+  }
 }

@@ -1,4 +1,4 @@
-@use "../variables";
+@use "@assets/styles/variables";
 
 html,
 body {
@@ -15,4 +15,8 @@ main {
   flex-direction: column;
   justify-content: center;
   color: #fff;
+}
+
+footer {
+  color: variables.$text-color-primary;
 }

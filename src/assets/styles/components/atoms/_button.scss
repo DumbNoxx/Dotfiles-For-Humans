@@ -1,5 +1,5 @@
-@use "../../variables";
-@use "../../base/animations";
+@use "@assets/styles/variables";
+@use "@assets/styles/base/animations";
 
 .btn {
   text-decoration: none;
@@ -39,8 +39,9 @@
 
 .btn-chevron-up {
   position: fixed;
-  top: 91%;
-  left: 96%;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
   width: 3rem;
   height: 3rem;
   padding-left: 0.4rem;

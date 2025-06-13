@@ -1,4 +1,4 @@
-@use "../../variables";
+@use "@assets/styles/variables";
 
 .subTitle {
   margin-top: -6rem;
@@ -6,6 +6,10 @@
   align-items: center;
   max-width: 30rem;
   animation: card-header-aparition 2s linear;
+
+  & svg {
+    color: variables.$button-hover-primary;
+  }
 }
 
 .subTitle-page {
@@ -14,7 +18,7 @@
   color: variables.$text-color-primary;
 }
 
-@media (width >= 45rem) {
+@media (width >=45rem) {
   .subTitle-page {
     font-size: 1.5rem;
   }

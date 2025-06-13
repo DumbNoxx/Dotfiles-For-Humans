@@ -1,8 +1,8 @@
-@use "../../_variables.scss";
+@use "@assets/styles/_variables.scss";
 
 .text-wrap {
   max-width: 50rem;
-  width: 25rem;
+  width: 100%;
   border-bottom: 2px solid gray;
   transition: all 3s ease-in-out;
 }
@@ -56,5 +56,17 @@
   &.visible {
     max-height: 20rem;
     opacity: 1;
+  }
+}
+
+@media (width >=45rem) {
+  .text-wrap {
+    width: 35rem;
+  }
+}
+
+@media (width <=30rem) {
+  .text-grap {
+    width: 10rem;
   }
 }

@@ -7,7 +7,7 @@ export const ButtonCheckWrapper = ({ reference }: ButtonCheckWrapperProps) => {
     <>
       <Button
         reference={reference}
-        href="#cardHeader"
+        href="#top"
         svg="chevron-up"
         className={`btn-chevron-up hidden`}
       />

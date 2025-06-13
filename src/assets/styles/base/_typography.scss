@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../variables";
+@use "@assets/styles/variables";
 
 body {
   font-family: variables.$font-primary !important;

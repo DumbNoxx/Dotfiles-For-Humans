@@ -2,7 +2,8 @@
   "background1": "With over 2 years of experience in web and mobile development, I specialize in creating clean, efficient, and user-centered digital experiences.",
   "background2": "My aproach combines technical expertise with a strong design degin sensibility, allowing me to build solutions that are both, visually compelling and functionally robust",
   "expertise": [
-    "Frontend Development (React, Astro, Vue, Sass)",
+    "Frontend Development (React, Astro, Vue, Sass, Angular-current learning)",
+    "Backend Development (Express, Flask, FastAPI, Go-current learning)",
     "Mobile Development (React Native)",
     "UI/UX Design & Implement",
     "Performance Optimization"

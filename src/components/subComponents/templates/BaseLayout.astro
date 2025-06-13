@@ -1,10 +1,10 @@
 ---
 import { CardHeader, CardProjects, CardExp } from "@atomic/index";
-import { CardHeaderRef, Svgs } from "@widget/index";
+import { CardHeaderRef, Svgs, Button } from "@widget/index";
 import type { PageLayoutProps } from "@libs/index";
 const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as PageLayoutProps;
 ---
-<div>
+<main>
  <article class="card-header" id="cardHeader">
   <CardHeader title="DYLAN MARCANO" subTitle="WEB & MOBILE DEVELOPER" />
   <CardHeaderRef client:load/>
@@ -20,4 +20,20 @@ const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as 
  <article class="card-experience">
   <CardExp title1={titleBack} title2={titleExp} title3={titleApro} className="card-exp"/>
  </article>
-</div>
+</main>
+<footer>
+ <div>
+  <Button svg="github" href="https://github.com/dumbnoxx?tab=repositories"/>
+  <Button svg="twitter" href="https://x.com/dumbnoxx?s=21"/>
+  <Button svg="instagram" href="https://www.instagram.com/dumb.nox/"/>
+  <Button svg="mail" href="mailto:kevinmarcano0921@gmail.com"/>
+ </div>
+ <div>
+ <p>
+  © 2025 Dylan. Apache license
+  </p>
+  <p>
+   Designed and developed with &hearts;
+  </p>
+ </div>
+</footer>
