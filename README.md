@@ -1,14 +1,12 @@
-# Dotfiles for Humans 🚀 _[Under Construction]_
+# Dotfiles for Humans 🚀 
 
 Welcome to Dotfiles for Humans, my modern portfolio built with Astro, React, TypeScript, and Sass! This project showcases my work, skills, and featured projects, crafted with cutting-edge technologies and best practices.
-
-> **Note:** This project is currently under active development. Features and documentation are being added regularly.
 
 ## Features ✨
 
 - **Modern & Responsive Design**: Clean and adaptable interface for all devices
-- **Featured Projects**: Highlights of my most relevant work _(coming soon)_
-- **Contact Section**: Easy access for collaborations or inquiries _(in progress)_
+- **Featured Projects**: Highlights of my most relevant work
+- **Contact Section**: Easy access for collaborations or inquiries
 - **Cutting-Edge Technologies**: Built with Astro, React, TypeScript and Sass
 - **Optimized Performance**: Lightning-fast loading with Astro's static generation
 
@@ -26,10 +24,10 @@ Clone the repository:
 `git clone git@github.com:DumbNoxx/Dotfiles-For-Humans.git`
 
 Install dependencies:  
-`npm install`
+`bun install`
 
 Start the development server:  
-`npm run dev`
+`bun run dev`
 
 ## How to Contribute 🤝
 
@@ -51,8 +49,7 @@ Have questions or want to collaborate? Reach out!
 
 - **GitHub**: [DumbNoxx](https://github.com/DumbNoxx)
 - **LinkedIn**: [Dylan Marcano](https://www.linkedin.com/in/dylan-marcano-994205266)
-
+- **Website**: [Dylan Marcano - Portfolio](https://nxus-website.verce.app)
 ---
 
 ✨ **Configuration made human-friendly**  
-🚧 _More features coming soon!_
