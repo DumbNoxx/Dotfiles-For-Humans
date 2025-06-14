@@ -1,13 +1,24 @@
 ---
-import { TextExp, DetailsExp } from "@atomic/index";
-import type { DetailsBlockProps } from "@libs/index";
-const { title, summary, text, 
-        text2, svg, className = "", 
-        className2 = "" } = Astro.props as DetailsBlockProps;
+import { ExpShowMore } from "@widget/index";
+import type { CardExpProps } from "@libs/index";
+import { detailsText } from "@libs/json/index";
+const { title1, title2, title3 } = Astro.props as CardExpProps;
 ---
-<div>
-    <TextExp title={title} className={className} />
-    <div class="div-details">
-      <DetailsExp summary={summary} text={text} text2={text2} svg={svg} className={className2}/>
-    </div>
-</div>
+ <div class="container">
+  <ExpShowMore title={title1}
+  details={detailsText["background1"]}
+  details2={detailsText["background2"]}
+  className="text-wrap active"
+  client:load
+  />
+  <ExpShowMore title={title2}
+  mapeo={detailsText["expertise"]}
+  className="text-wrap active"
+  client:load
+  />
+  <ExpShowMore title={title3}
+  details={detailsText["aproach"]}
+  className="text-wrap active"
+  client:load
+  />
+ </div>
