@@ -2,6 +2,7 @@
 import { CardHeader, CardProjects, CardExp } from "@atomic/index";
 import { CardHeaderRef, Svgs, Button } from "@widget/index";
 import type { PageLayoutProps } from "@libs/index";
+const email = import.meta.env.PUBLIC_EMAIL;
 const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as PageLayoutProps;
 ---
 <main>
@@ -25,7 +26,7 @@ const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as 
  <div>
   <Button svg="twitter" href="https://x.com/dumbnoxx?s=21"/>
   <Button svg="instagram" href="https://www.instagram.com/dumb.nox/"/>
-  <Button svg="mail" href="mailto:kevinmarcano0921@gmail.com"/>
+  <Button svg="mail" href={`mailto:${email}`}/>
  </div>
  <div>
  <p>
