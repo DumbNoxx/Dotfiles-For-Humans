@@ -2,7 +2,6 @@
 export { default as Title } from "./atoms/Title.astro";
 export { default as SubTitle } from "./atoms/SubTitle.astro";
 export { default as BoxImg } from "./atoms/BoxImg.astro";
-export { default as TextExp } from "./atoms/TextExp.astro";
 // Molecules
 export { default as TitleBlock } from "./molecules/TitleBlock.astro";
 export { default as ButtonBlock } from "./molecules/ButtonBlock.astro";
