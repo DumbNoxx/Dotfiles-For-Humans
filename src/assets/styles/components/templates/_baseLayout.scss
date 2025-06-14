@@ -34,13 +34,12 @@ footer {
     flex-direction: row;
     padding: 5rem;
 
+
     & a {
-      width: 5rem;
-      height: 3rem;
       border-radius: 0;
-      padding-right: 7rem;
       transition: 0.3s linear;
       border: 0;
+      object-fit: cover;
 
       & svg {
         width: 2rem;
@@ -57,7 +56,6 @@ footer {
   }
 
   & div:nth-child(2) {
-    width: 50%;
     margin: 0 auto;
     padding-bottom: 6px;
     text-align: center;
@@ -72,10 +70,10 @@ footer {
 
   footer div:first-child {
     & a {
-      margin-left: 0.3rem;
+      width: 1rem;
+      margin-left: -2rem;
     }
 
-    width: 1rem;
   }
 }
 
