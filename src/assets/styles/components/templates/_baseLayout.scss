@@ -30,33 +30,36 @@ footer {
   margin: 0 auto;
 
   & div:first-child {
+    gap: 16px;
     display: flex;
-    flex-direction: row;
-    padding: 5rem;
+    justify-content: center;
 
 
     & a {
-      border-radius: 0;
-      transition: 0.3s linear;
-      border: 0;
-      object-fit: cover;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s ease-in-out;
 
       & svg {
-        width: 2rem;
+        width: 24px;
+        height: 24px;
+        display: block;
       }
 
       &:hover {
-        transform: scale(2)
+        transform: scale(2);
+        transform-origin: center;
       }
     }
 
-    & .github {
-      margin-top: -1.3rem;
-    }
   }
 
   & div:nth-child(2) {
     margin: 0 auto;
+    margin-top: 5rem;
     padding-bottom: 6px;
     text-align: center;
   }
@@ -66,14 +69,6 @@ footer {
 @media(width <=30rem) {
   article:nth-child(3) {
     height: 170vh;
-  }
-
-  footer div:first-child {
-    & a {
-      width: 1rem;
-      margin-left: -2rem;
-    }
-
   }
 }
 
