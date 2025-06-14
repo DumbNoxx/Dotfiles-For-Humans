@@ -11,7 +11,7 @@ export const Button = ({ text, svg, className = "", href, reference }: ButtonPro
         target={href?.startsWith("#") ? "" : "_blank"}
         className={`btn ${className}`}
       >
-        <Svgs nameSVG={svg} className={svg} /> {text}
+        <Svgs nameSVG={svg} className={svg} /> {text ? <span>{text}</span> : ""}
       </a>
     </>
   );
