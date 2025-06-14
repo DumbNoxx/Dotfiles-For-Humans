@@ -49,7 +49,7 @@ Have questions or want to collaborate? Reach out!
 
 - **GitHub**: [DumbNoxx](https://github.com/DumbNoxx)
 - **LinkedIn**: [Dylan Marcano](https://www.linkedin.com/in/dylan-marcano-994205266)
-- **Website**: [Dylan Marcano - Portfolio](https://nxus-website.verce.app)
+- **Website**: [Dylan Marcano - Portfolio](https://nxus-website.vercel.app)
 ---
 
 ✨ **Configuration made human-friendly**  
