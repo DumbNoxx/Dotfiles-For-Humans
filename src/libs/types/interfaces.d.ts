@@ -83,12 +83,6 @@ export interface PageLayoutProps {
   titleApro: string;
 }
 
-// Types
-export type UseVisibilityTriggerOptions = {
-  elementId: string;
-  rootMargin?: string;
-  threshold?: number;
-};
 
 // Widgets
 export interface ShowMoreProps {
@@ -103,4 +97,10 @@ export interface ShowMoreProps {
 
 export interface ButtonCheckWrapperProps {
   reference?: React.RefObject;
+}
+
+export interface NavLeftProps {
+  id: string;
+  listNav: string[];
+  className?: string;
 }

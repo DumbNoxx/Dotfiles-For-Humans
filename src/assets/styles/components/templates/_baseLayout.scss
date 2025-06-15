@@ -1,3 +1,5 @@
+@use "@assets/styles/variables";
+
 article {
   height: 60vh;
   margin-bottom: 5rem;
@@ -23,6 +25,20 @@ article:nth-child(3) {
   margin: 0 auto;
   animation: chevron-down-indicator 3s linear infinite;
 }
+
+
+.navLeft {
+  position: fixed;
+  background-color: variables.$background-overlay;
+  right: 20px;
+  top: 40%;
+  max-width: 5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
 
 footer {
   max-width: 70rem;
@@ -69,6 +85,10 @@ footer {
 @media(width <=30rem) {
   article:nth-child(3) {
     height: 135vh;
+  }
+
+  .navLeft {
+    display: none;
   }
 }
 

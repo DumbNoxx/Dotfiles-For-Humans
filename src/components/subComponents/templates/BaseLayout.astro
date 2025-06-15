@@ -15,14 +15,14 @@ const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as 
    <Svgs nameSVG={nameSvg} className={nameSvg} />
   </div>
  </article>
- <article class="card-projects">
+ <article class="card-projects" id="cardProject">
   <CardProjects text={textButton} className="cardProjects" />
  </article>
- <article class="card-experience">
+ <article class="card-experience" id="cardExp">
   <CardExp title1={titleBack} title2={titleExp} title3={titleApro} className="card-exp"/>
  </article>
 </main>
-<footer>
+<footer id="footer">
  <div>
   <Button svg="twitter" href="https://x.com/dumbnoxx?s=21"/>
   <Button svg="instagram" href="https://www.instagram.com/dumb.nox/"/>

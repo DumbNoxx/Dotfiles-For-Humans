@@ -1,0 +1,13 @@
+@use "@assets/styles/variables";
+
+.buttonNav {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.5rem;
+  background-color: variables.$color-nav-background-secondary;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: variables.$button-hover-primary;
+  }
+}
