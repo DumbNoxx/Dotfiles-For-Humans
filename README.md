@@ -9,6 +9,7 @@ Welcome to Dotfiles for Humans, my modern portfolio built with Astro, React, Typ
 - **Contact Section**: Easy access for collaborations or inquiries
 - **Cutting-Edge Technologies**: Built with Astro, React, TypeScript and Sass
 - **Optimized Performance**: Lightning-fast loading with Astro's static generation
+- **Nav Bar**: I have added a nav bar that does not appear on mobiles.
 
 ## Technologies Used 🛠️
 
