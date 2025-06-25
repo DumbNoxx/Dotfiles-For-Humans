@@ -4,16 +4,18 @@
   animation: card-header-aparition 1.8s linear;
 }
 
-.title-page {
+.title-page,
+h1 {
   font-size: 2.5rem;
   font-weight: 900;
 }
 
-@media (width >= 45rem) {
+@media (width >=45rem) {
   .title {
     max-width: 60rem;
     margin-bottom: -4rem;
   }
+
   .title-page {
     font-size: 6rem;
   }
