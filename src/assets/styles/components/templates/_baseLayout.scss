@@ -30,7 +30,7 @@ article:nth-child(3) {
 .navLeft {
   position: fixed;
   background-color: variables.$background-overlay;
-  right: 20px;
+  right: 10px;
   top: 40%;
   max-width: 5rem;
   border-radius: 1.5rem;
@@ -82,6 +82,7 @@ footer {
 
 }
 
+
 @media(width <=30rem) {
   article:nth-child(3) {
     height: 135vh;
@@ -89,6 +90,10 @@ footer {
 
   .navLeft {
     display: none;
+  }
+
+  footer {
+    margin-top: 5rem;
   }
 }
 
