@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use "./variables";
 
 *,
@@ -6,4 +7,16 @@
   box-sizing: variables.$box-predecible;
   scroll-behavior: variables.$scroll-smooth;
   font-family: variables.$font-primary !important;
+}
+
+h1 {
+  font-size: map.get(variables.$font-sizes, "xl");
+}
+
+h2 {
+  font-size: map.get(variables.$font-sizes, "lg");
+}
+
+h3 {
+  font-size: map.get(variables.$font-sizes, "base");
 }

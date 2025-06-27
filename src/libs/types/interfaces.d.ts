@@ -104,3 +104,10 @@ export interface NavLeftProps {
   listNav: string[];
   className?: string;
 }
+export interface handleClickProps {
+  svgTargetRef: React.RefObject<HTMLSpanElement | null>;
+  textRef: React.ReactObject<HTMLDivElement | null>;
+  isActive: boolean;
+  setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
+
+}
