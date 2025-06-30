@@ -19,7 +19,7 @@ export const ExpShowMore = ({ title, details,
             {details}
             <br />
             {details2 ?
-              details2
+              <div><br />{details2}</div>
               :
               ""
             }
