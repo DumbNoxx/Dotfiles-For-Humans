@@ -45,6 +45,7 @@ export interface BoxIgmProps {
   | Blob
   | DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement> | HTMLImageElement>;
   className?: string;
+  link: string;
 }
 
 export interface CardHeaderProps {
