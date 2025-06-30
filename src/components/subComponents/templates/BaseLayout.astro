@@ -3,11 +3,11 @@ import { CardHeader, CardProjects, CardExp } from "@atomic/index";
 import { CardHeaderRef, Svgs, Button, NavLeft } from "@widget/index";
 import type { PageLayoutProps } from "@libs/index";
 const email = import.meta.env.PUBLIC_EMAIL;
-const listNav = ["cardHeader","cardProject","cardExp","footer"];
+const listNav = ["cardHeader", "cardProject", "cardExp"];
 const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as PageLayoutProps;
 ---
 <nav>
- <NavLeft id="cardHeader" className="navLeft" listNav={listNav} />
+ <NavLeft id="cardHeader" className="navLeft" listNav={listNav} client:only/>
 </nav>
 <main>
  <article class="card-header" id="cardHeader">
