@@ -1,7 +1,6 @@
 import { open, close, removeAllHandle } from "@helpers/index";
 import { useCallback } from "react";
 import type { handleClickProps } from "@libs/index";
-import  { accordionManager } from "./acorrdionManager";
 
 export const handleClick = ({ svgTargetRef, textRef, isActive, setIsActive }: handleClickProps) => {
   const callback = useCallback(() => {
@@ -12,16 +11,14 @@ export const handleClick = ({ svgTargetRef, textRef, isActive, setIsActive }: ha
     const buttons = document.querySelectorAll(".container-details");
     const svgs = document.querySelectorAll(".container-svg");
     setIsActive(!isActive);
+    removeAllHandle(buttons, svgs);
     if (isActive) {
       close(textDiv, svg)
     } else {
-      removeAllHandle(buttons, svgs);
       setTimeout(() => {
         open(textDiv, svg);
-      }, 300);
+      }, 250);
     }
-    // setIsActive(!isActive);
-    // console.log(isActive);
   }, [isActive, setIsActive]);
   return {
     callback

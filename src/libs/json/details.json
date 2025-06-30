@@ -1,12 +1,12 @@
 {
-  "background1": "With over 2 years of experience in web and mobile development, I specialize in creating clean, efficient, and user-centered digital experiences.",
-  "background2": "My aproach combines technical expertise with a strong design degin sensibility, allowing me to build solutions that are both, visually compelling and functionally robust",
+  "background1": "Over two years of experience in web and mobile development, I specialize in creating clean, efficient, and user-centered digital experiences.",
+  "background2": "My approach combines technical expertise with a strong design sensibility, allowing me to build solutions that are both visually compelling and functionally robust.",
   "expertise": [
-    "Frontend Development (React, Astro, Vue, Sass, Angular-current learning)",
-    "Backend Development (Express, Flask, FastAPI, Go-current learning)",
+    "Frontend Development (React, Astro, Vue, Sass, Angular — currently learning)",
+    "Backend Development (Express, Flask, FastAPI, Go — currently learning)",
     "Mobile Development (React Native)",
-    "UI/UX Design & Implement",
+    "UI/UX Design & Implementation",
     "Performance Optimization"
   ],
-  "aproach": "I believe in minimalism not just as an aesthetic choice, but as a development philosphy. By focusing on what truly matters and eliminating unnecessary complexity, I create digital products that are intuitive, maintainable, and built to last."
+  "approach": "I believe in minimalism not just as an aesthetic choice, but as a development philosophy. By focusing on what truly matters and eliminating unnecessary complexity, I create digital products that are intuitive, maintainable, and built to last."
 }
