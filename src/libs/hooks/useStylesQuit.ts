@@ -1,6 +1,6 @@
 import { handleClick } from "@libs/helpers/index";
 import { accordionManager } from "@libs/helpers/acorrdionManager";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type Dispatch, type SetStateAction } from "react";
 
 export const useStylesQuit = () => {
   const targetButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -8,7 +8,7 @@ export const useStylesQuit = () => {
   const textRef = useRef<HTMLDivElement | null>(null);
   const [isActive, setIsActive] = useState(false);
   // This manipulation of the DOM is temporary
-  const setActiveWrapper = (active: boolean) => {
+  const setActiveWrapper: Dispatch<SetStateAction<boolean>> = (active) => {
     accordionManager.setActive(setActiveWrapper, active);
     setIsActive(active);
   };

@@ -1,7 +1,7 @@
 {
   "name": "dotfiles-for-humans",
   "type": "module",
-  "version": "0.0.6",
+  "version": "1.7.2",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

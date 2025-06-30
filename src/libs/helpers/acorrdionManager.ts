@@ -1,9 +1,15 @@
-type SetActiveFunction = (active: boolean) => void;
+import type { Dispatch, SetStateAction } from "react";
 
+type SetActiveFunction = Dispatch<SetStateAction<boolean>>;
 class AccordionManager {
   private currentActive: SetActiveFunction | null = null;
 
-  setActive(instance: SetActiveFunction, isActive: boolean) {
+  setActive(instance: SetActiveFunction, action: SetStateAction<boolean>) {
+    if (typeof action === undefined) {
+      throw new Error("Function updater nor supported");
+    }
+
+    const isActive = action;
     if (isActive) {
       // Si se está activando, desactivar el anterior
       if (this.currentActive && this.currentActive !== instance) {
