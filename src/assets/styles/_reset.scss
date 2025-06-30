@@ -11,7 +11,7 @@
 
 h1 {
   font-size: map.get(variables.$font-sizes, "xl");
-  margin-bottom: 5.8rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -20,4 +20,11 @@ h2 {
 
 h3 {
   font-size: map.get(variables.$font-sizes, "base");
+}
+
+@media (width >=45rem) {
+  h1 {
+    font-size: map.get(variables.$font-sizes, "xl");
+    margin-bottom: 5.8rem;
+  }
 }
