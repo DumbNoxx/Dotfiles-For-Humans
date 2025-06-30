@@ -1,12 +1,18 @@
-import { handleClick } from "@libs/helpers/handleClick";
+import { handleClick } from "@libs/helpers/index";
+import { accordionManager } from "@libs/helpers/acorrdionManager";
 import { useEffect, useRef, useState } from "react";
+
 export const useStylesQuit = () => {
   const targetButtonRef = useRef<HTMLButtonElement | null>(null);
   const svgTargetRef = useRef<HTMLSpanElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
   const [isActive, setIsActive] = useState(false);
   // This manipulation of the DOM is temporary
-  const { callback } = handleClick({ svgTargetRef, textRef, isActive, setIsActive });
+  const setActiveWrapper = (active: boolean) => {
+    accordionManager.setActive(setActiveWrapper, active);
+    setIsActive(active);
+  };
+  const { callback } = handleClick({ svgTargetRef, textRef, isActive, setIsActive: setActiveWrapper });
   useEffect(() => {
     const button = targetButtonRef.current;
     if (!button) return;

@@ -10,4 +10,8 @@
   &:hover {
     background-color: variables.$button-hover-primary;
   }
+
+  &.active {
+    background-color: variables.$button-hover-primary;
+  }
 }
