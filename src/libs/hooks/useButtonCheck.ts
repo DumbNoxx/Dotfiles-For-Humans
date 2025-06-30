@@ -6,6 +6,7 @@ export const useVisibilityTrigger = () => {
 
   // UseCallback 
   const handleScroll = useCallback(() => {
+    if (typeof window === "undefined") return;
     const button = buttonRef.current;
     const target = targetRef.current;
     if (!(button && target)) return;
@@ -13,6 +14,7 @@ export const useVisibilityTrigger = () => {
   }, [])
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
