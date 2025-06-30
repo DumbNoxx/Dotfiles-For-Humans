@@ -34,8 +34,7 @@
   }
 
   &:hover {
-    color: variables.$button-hover-primary;
-    text-decoration: underline;
+    color: inherit;
   }
 
 }
