@@ -2,7 +2,13 @@
 
 .card-exp {
   max-width: 60rem;
+  width: 100%;
   margin: 0 auto;
+
+  & .container-exp {
+    width: 85%;
+    margin: 0 auto;
+  }
 
   & h2 {
     color: variables.$text-color-primary;
