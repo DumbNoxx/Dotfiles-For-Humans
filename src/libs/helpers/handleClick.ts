@@ -15,9 +15,7 @@ export const handleClick = ({ svgTargetRef, textRef, isActive, setIsActive }: ha
     if (isActive) {
       close(textDiv, svg)
     } else {
-      setTimeout(() => {
-        open(textDiv, svg);
-      }, 250);
+      open(textDiv, svg);
     }
   }, [isActive, setIsActive]);
   return {

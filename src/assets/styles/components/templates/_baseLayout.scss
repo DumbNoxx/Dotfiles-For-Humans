@@ -44,28 +44,30 @@ footer {
   max-width: 70rem;
   width: 100%;
   margin: 0 auto;
+  margin-top: 6rem;
 
   & div:first-child {
-    gap: 16px;
+    gap: 3rem;
+    width: 20rem;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 
-
     & a {
-      width: 40px;
-      height: 40px;
-      display: flex;
+      width: 30px;
+      height: 30px;
+      border-radius: 0;
       align-items: center;
       justify-content: center;
-      transition: 0.5s ease-in-out;
+      position: relative;
+      transition: 0.35s ease;
 
       & svg {
-        width: 24px;
-        height: 24px;
-        display: block;
+        margin-top: 0.1rem;
       }
 
-      &:hover {
+      & svg:hover {
+        color: variables.$button-hover-primary;
         transform: scale(2);
         transform-origin: center;
       }
@@ -85,7 +87,7 @@ footer {
 
 @media(width <=30rem) {
   article:nth-child(3) {
-    height: 135vh;
+    height: 170vh;
   }
 
   .navLeft {
@@ -93,7 +95,7 @@ footer {
   }
 
   footer {
-    margin-top: 7rem;
+    margin-top: 12rem;
   }
 }
 

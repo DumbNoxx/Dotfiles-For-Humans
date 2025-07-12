@@ -25,8 +25,7 @@
     margin-top: 0.1rem;
     margin-right: -4rem;
     transform: rotate(0);
-    transition: transform 0.7s linear 0.3s, fill 0.3s linear;
-
+    transition: transform 0.3s linear 0.3s, fill 0.3s linear;
   }
 
   & span.open svg {
@@ -48,7 +47,7 @@
   max-height: 0;
   overflow: hidden;
   padding-left: 2rem;
-  transition: max-height 0.7s ease-in-out 0.3s;
+  transition: max-height 0.3s ease 0.3s;
   font-size: 0.86rem;
   color: variables.$text-color-secondary;
 
