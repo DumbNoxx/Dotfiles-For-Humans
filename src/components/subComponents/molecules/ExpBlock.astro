@@ -1,24 +1,30 @@
 ---
 import { ExpShowMore } from "@widget/index";
-import type { CardExpProps } from "@libs/index";
-import { detailsText } from "@libs/json/index";
-const { title1, title2, title3 } = Astro.props as CardExpProps;
+
+const response = await fetch(
+  "https://dotfiles-for-humans-backend.onrender.com/Skills"
+);
+const data = (await response.json())[0];
 ---
- <div class="container">
-  <ExpShowMore title={title1}
-  details={detailsText["background1"]}
-  details2={detailsText["background2"]}
-  className="text-wrap active"
-  client:load
-  />
-  <ExpShowMore title={title2}
-  mapeo={detailsText["expertise"]}
-  className="text-wrap active"
-  client:load
-  />
-  <ExpShowMore title={title3}
-  details={detailsText["approach"]}
-  className="text-wrap active"
-  client:load
-  />
- </div>
+
+<div class="container">
+  {
+    Object.entries(data).map(([title, details]) =>
+        Array.isArray(details) ? (
+          <ExpShowMore
+            title={title.toUpperCase().replace(/\d+$/, "")}
+            mapeo={details}
+            className="text-wrap active"
+            client:load
+          />
+        ) : (
+          <ExpShowMore
+            title={title.toUpperCase().replace(/\d+$/, "")}
+            details={details}
+            className="text-wrap active"
+            client:load
+          />
+        )
+      )
+  }
+</div>
