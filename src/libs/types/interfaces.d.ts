@@ -88,7 +88,7 @@ export interface PageLayoutProps {
 // Widgets
 export interface ShowMoreProps {
   title: string;
-  details?: string;
+  details?: string | unknown;
   details2?: string;
   className?: string;
   id?: string;
