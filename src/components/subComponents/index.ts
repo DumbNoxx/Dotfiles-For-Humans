@@ -12,3 +12,4 @@ export { default as CardProjects } from "./organisms/CardProjects.astro";
 export { default as CardExp } from "./organisms/CardExp.astro";
 // Templates
 export { default as BaseLayout } from "./templates/BaseLayout.astro";
+export { default as BlogLayout } from "./templates/LayoutBlog.astro";

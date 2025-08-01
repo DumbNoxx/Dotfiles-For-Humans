@@ -6,7 +6,9 @@
   display: inline-flex;
   align-items: center;
   max-width: 30rem;
-  animation: card-header-aparition 2s linear;
+  animation: card-header-aparition 1.5s linear;
+  font-style: italic;
+
 
   & svg {
     color: variables.$button-hover-primary;
@@ -15,7 +17,7 @@
 
 .subTitle-page {
   margin-left: -2rem;
-  font-weight: bold;
+  font-weight: 300;
   color: variables.$text-color-primary;
 }
 

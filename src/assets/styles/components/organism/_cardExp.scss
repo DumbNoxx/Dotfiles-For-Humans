@@ -1,7 +1,7 @@
 @use "@assets/styles/variables.scss";
 
 .card-exp {
-  max-width: 60rem;
+  max-width: 70rem;
   width: 100%;
   margin: 0 auto;
 
@@ -12,5 +12,7 @@
 
   & h2 {
     color: variables.$text-color-primary;
+    font-style: italic;
+    font-weight: 300;
   }
 }
