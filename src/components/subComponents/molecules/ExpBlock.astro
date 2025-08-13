@@ -1,8 +1,8 @@
 ---
 import { ExpShowMore } from "@widget/index";
+import { BackendApi } from "@/services"
 const api = import.meta.env.PRIVATE_API
-const response = await fetch(api);
-const data = (await response.json())[0];
+const data = await BackendApi(api)
 ---
 
 <div class="container">
@@ -14,7 +14,7 @@ const data = (await response.json())[0];
             mapeo={details}
             className="text-wrap active"
             client:load
-          />
+            />
         ) : (
           <ExpShowMore
             title={title.toUpperCase().replace(/\d+$/, "")}
