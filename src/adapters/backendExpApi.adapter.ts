@@ -1,9 +1,11 @@
-import { ApiExp, Exp } from "src/models/expBlock.type";
+import type { ApiExp, Exp } from "src/models/expBlock.type";
 
 export const BackendExpApiAdapter = (url: ApiExp): Exp => {
+  const { background, expertise, approach } = url;
+  console.log(background)
   return {
-    background: url.background,
-    expertise: url.expertise,
-    approach: url.approach,
+    background,
+    expertise,
+    approach,
   }
 }
