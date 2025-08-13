@@ -1,5 +1,7 @@
 // Atoms
 
+import { ReactNode } from "react";
+
 export interface ButtonProps {
   text?: string;
   svg?: JSX.element;
@@ -88,7 +90,7 @@ export interface PageLayoutProps {
 // Widgets
 export interface ShowMoreProps {
   title: string;
-  details?: string | unknown;
+  details?: string | ReactNode;
   details2?: string;
   className?: string;
   id?: string;
@@ -97,7 +99,7 @@ export interface ShowMoreProps {
 }
 
 export interface ButtonCheckWrapperProps {
-  reference?: React.RefObject;
+  reference?: React.RefObject<HTMLDivElement | HTMLAnchorElement | null>;
 }
 
 export interface NavLeftProps {
@@ -107,7 +109,7 @@ export interface NavLeftProps {
 }
 export interface handleClickProps {
   svgTargetRef: React.RefObject<HTMLSpanElement | null>;
-  textRef: React.ReactObject<HTMLDivElement | null>;
+  textRef: React.RefObject<HTMLDivElement | null>;
   isActive: boolean;
   setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
 

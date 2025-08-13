@@ -14,19 +14,9 @@ export const ExpShowMore = ({ title, details,
         </span>
       </button>
       <div className="container-details" ref={textRef}>
-        {details || details2 ?
+        {details ?
           <p>
             {details}
-            <br />
-            {details2 ?
-              <br />
-              :
-              ""}
-            {details2 ?
-              details2
-              :
-              ""
-            }
           </p>
           :
           <ul>
