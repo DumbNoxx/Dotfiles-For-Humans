@@ -10,10 +10,10 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.0",
+    "@astrojs/react": "^4.4.2",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
-    "astro": "^5.10.1",
+    "astro": "^5.16.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sass": "^1.89.0",

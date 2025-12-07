@@ -2,7 +2,7 @@
 import { BoxImg } from "@atomic/index";
 import { Button } from "@widget/index";
 import type { ButtonBlockProps } from "@libs/index";
-import { creatureCodex, cashRegister, phoneValidator } from "@assets/index";
+import { creatureCodex, cashRegister, pomohub } from "@assets/index";
 const {text, className = ""} = Astro.props as ButtonBlockProps;
 ---
 <div class={className}>
@@ -16,9 +16,9 @@ const {text, className = ""} = Astro.props as ButtonBlockProps;
   </div>
   <div class="block">
     <div class="block-projects">
-    <BoxImg label="Number Validator" img={phoneValidator} className="project" link="https://telephone-number-validator-weld.vercel.app/"/>
-    <BoxImg label="Cash Register" img={cashRegister} className="project" link="https://cash-register-umber.vercel.app/"/>
-    <BoxImg label="Creature Codex" img={creatureCodex} className="project" link="https://rpg-creature-search.vercel.app/"/>
+    <BoxImg label="Number Validator" img={pomohub} className="project" link="https://pomo-hub-chi.vercel.app/" />
+    <BoxImg label="Cash Register" img={cashRegister} className="project" link="https://cash-register-umber.vercel.app/" />
+    <BoxImg label="Creature Codex" img={creatureCodex} className="project" link="https://rpg-creature-search.vercel.app/" />
     </div>
   </div>
 </div>
