@@ -8,32 +8,32 @@
     "dist"
   ],
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "@atomic/*": [
-        "src/components/subComponents/*"
+        "./src/components/subComponents/*"
       ],
       "@libs/*": [
-        "src/libs/*"
+        "./src/libs/*"
       ],
       "@assets/*": [
-        "src/assets/*"
+        "./src/assets/*"
       ],
       "@widget/*": [
-        "src/components/widgets/*"
+        "./src/components/widgets/*"
       ],
       "@layout/*": [
-        "src/layouts/*"
+        "./src/layouts/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "@helpers/*": [
-        "src/libs/helpers/*"
-      ]
+        "./src/libs/helpers/*"
+      ],
+      "*": ["./*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

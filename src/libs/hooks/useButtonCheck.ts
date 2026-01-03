@@ -1,26 +1,25 @@
-import { useEffect, useRef, useCallback } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 export const useVisibilityTrigger = () => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const buttonRef = useRef<HTMLAnchorElement | null>(null);
+	const targetRef = useRef<HTMLDivElement | null>(null);
+	const buttonRef = useRef<HTMLAnchorElement | null>(null);
 
-  // UseCallback 
-  const handleScroll = useCallback(() => {
-    if (typeof window === "undefined") return;
-    const button = buttonRef.current;
-    const target = targetRef.current;
-    if (!(button && target)) return;
-    button.classList.toggle("hidden", window.pageYOffset <= target.offsetTop);
-  }, [])
+	const handleScroll = useCallback(() => {
+		if (typeof window === "undefined") return;
+		const button = buttonRef.current;
+		const target = targetRef.current;
+		if (!(button && target)) return;
+		button.classList.toggle("hidden", window.pageYOffset <= target.offsetTop);
+	}, []);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [handleScroll]);
 
-  return {
-    targetRef,
-    buttonRef
-  };
+	return {
+		targetRef,
+		buttonRef,
+	};
 };
