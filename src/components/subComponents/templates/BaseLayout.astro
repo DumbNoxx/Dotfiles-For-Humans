@@ -4,40 +4,48 @@ import { CardHeaderRef, Svgs, Button, NavLeft } from "@widget/index";
 import type { PageLayoutProps } from "@libs/index";
 const email = import.meta.env.PUBLIC_EMAIL;
 const listNav = ["cardHeader", "cardProject", "cardExp"];
-const {  nameSvg, textButton, titleBack, titleExp, titleApro } = Astro.props as PageLayoutProps;
+const { nameSvg, textButton, titleBack, titleExp, titleApro } =
+    Astro.props as PageLayoutProps;
 ---
+
 <nav>
- <NavLeft id="cardHeader" className="navLeft" listNav={listNav} client:only/>
+    <NavLeft
+        id="cardHeader"
+        className="navLeft"
+        listNav={listNav}
+        client:only
+    />
 </nav>
 <main>
- <article class="card-header" id="cardHeader">
-  <CardHeader title="DYLAN MARCANO" subTitle="WEB & MOBILE DEVELOPER" />
-  <CardHeaderRef client:load/>
- </article>
- <article>
-  <div class="chevron-down-div">
-   <Svgs nameSVG={nameSvg} className={nameSvg} />
-  </div>
- </article>
- <article class="card-projects" id="cardProject">
-  <CardProjects text={textButton} className="cardProjects" />
- </article>
- <article class="card-experience" id="cardExp">
-  <CardExp title1={titleBack} title2={titleExp} title3={titleApro} className="card-exp"/>
- </article>
+    <article class="card-header" id="cardHeader">
+        <CardHeader title="DYLAN MARCANO" subTitle="SOFTWARE DEVELOPER" />
+        <CardHeaderRef client:load />
+    </article>
+    <article>
+        <div class="chevron-down-div">
+            <Svgs nameSVG={nameSvg} className={nameSvg} />
+        </div>
+    </article>
+    <article class="card-projects" id="cardProject">
+        <CardProjects text={textButton} className="cardProjects" />
+    </article>
+    <article class="card-experience" id="cardExp">
+        <CardExp
+            title1={titleBack}
+            title2={titleExp}
+            title3={titleApro}
+            className="card-exp"
+        />
+    </article>
 </main>
 <footer id="footer">
- <div class="container-footer">
-  <Button svg="twitter" href="https://x.com/dumbnoxx?s=21"/>
-  <Button svg="instagram" href="https://www.instagram.com/dumb.nox/"/>
-  <Button svg="mail" href={`mailto:${email}`}/>
- </div>
- <div>
- <p>
-  © 2025 Dylan. Apache license
-  </p>
-  <p>
-   Designed and developed with &hearts;
-  </p>
- </div>
+    <div class="container-footer">
+        <Button svg="twitter" href="https://x.com/dumbnoxx?s=21" />
+        <Button svg="instagram" href="https://www.instagram.com/dumb.nox/" />
+        <Button svg="mail" href={`mailto:${email}`} />
+    </div>
+    <div>
+        <p>© 2025 Dylan. Apache license</p>
+        <p>Designed and developed with &hearts;</p>
+    </div>
 </footer>
