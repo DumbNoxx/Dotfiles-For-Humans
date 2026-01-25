@@ -21,35 +21,32 @@ const { nameSvg, textButton, titleBack, titleExp, titleApro } =
         <CardHeader title="DYLAN MARCANO" subTitle="SOFTWARE DEVELOPER">
             <CardHeaderRef client:load />
         </CardHeader>
-        <article>
-            <div class="chevron-down-div">
-                <Svgs nameSVG={nameSvg} className={nameSvg} />
-            </div>
-        </article>
-        <article class="card-projects" id="cardProject">
-            <CardProjects text={textButton} className="cardProjects" />
-        </article>
-        <article class="card-experience" id="cardExp">
-            <CardExp
-                title1={titleBack}
-                title2={titleExp}
-                title3={titleApro}
-                className="card-exp"
-            />
-        </article>
     </article>
-    <footer id="footer">
-        <div class="container-footer">
-            <Button svg="twitter" href="https://x.com/dumbnoxx?s=21" />
-            <Button
-                svg="instagram"
-                href="https://www.instagram.com/dumb.nox/"
-            />
-            <Button svg="mail" href={`mailto:${email}`} />
+    <article>
+        <div class="chevron-down-div">
+            <Svgs nameSVG={nameSvg} className={nameSvg} />
         </div>
-        <div>
-            <p>© 2025 Dylan. Apache license</p>
-            <p>Designed and developed with &hearts;</p>
-        </div>
-    </footer>
+    </article>
+    <article class="card-projects" id="cardProject">
+        <CardProjects text={textButton} className="cardProjects" />
+    </article>
+    <article class="card-experience" id="cardExp">
+        <CardExp
+            title1={titleBack}
+            title2={titleExp}
+            title3={titleApro}
+            className="card-exp"
+        />
+    </article>
 </main>
+<footer id="footer">
+    <div class="container-footer">
+        <Button svg="twitter" href="https://x.com/dumbnoxx?s=21" />
+        <Button svg="instagram" href="https://www.instagram.com/dumb.nox/" />
+        <Button svg="mail" href={`mailto:${email}`} />
+    </div>
+    <div>
+        <p>© 2025 Dylan. Apache license</p>
+        <p>Designed and developed with &hearts;</p>
+    </div>
+</footer>
