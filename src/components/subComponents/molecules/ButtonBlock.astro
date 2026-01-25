@@ -2,9 +2,10 @@
 import { BoxImg } from "@atomic/index";
 import { Button } from "@widget/index";
 import type { ButtonBlockProps } from "@libs/index";
-import { creatureCodex, cashRegister, pomohub } from "@assets/index";
-const {text, className = ""} = Astro.props as ButtonBlockProps;
+import { creatureCodex, goxe, pomohub } from "@assets/index";
+const { text, className = "" } = Astro.props as ButtonBlockProps;
 ---
+
 <div class={className}>
   <div class="button-github">
     <Button
@@ -16,9 +17,24 @@ const {text, className = ""} = Astro.props as ButtonBlockProps;
   </div>
   <div class="block">
     <div class="block-projects">
-    <BoxImg label="PomoHub" img={pomohub} className="project" link="https://pomo-hub-chi.vercel.app/" />
-    <BoxImg label="Cash Register" img={cashRegister} className="project" link="https://cash-register-umber.vercel.app/" />
-    <BoxImg label="Creature Codex" img={creatureCodex} className="project" link="https://rpg-creature-search.vercel.app/" />
+      <BoxImg
+        label="PomoHub"
+        img={pomohub}
+        className="project"
+        link="https://pomo-hub-chi.vercel.app/"
+      />
+      <BoxImg
+        label="Goxe"
+        img={goxe}
+        className="project"
+        link="https://github.com/DumbNoxx/Goxe"
+      />
+      <BoxImg
+        label="Creature Codex"
+        img={creatureCodex}
+        className="project"
+        link="https://rpg-creature-search.vercel.app/"
+      />
     </div>
   </div>
 </div>
