@@ -41,5 +41,10 @@
 }
 
 .mastodon {
-  background-color: red;
+  color: #6364ff;
+}
+
+.mastodon svg {
+  stroke: none;
+  fill: currentColor;
 }
