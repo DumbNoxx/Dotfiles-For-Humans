@@ -8,6 +8,7 @@ export interface ButtonProps {
   className?: string;
   href?: string | undefined;
   reference?: React.RefObject;
+  rel?: string
 }
 
 export interface SvgProps {
