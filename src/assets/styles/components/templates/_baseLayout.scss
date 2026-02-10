@@ -60,10 +60,12 @@ footer {
       align-items: center;
       justify-content: center;
       position: relative;
-      transition: 3s ease;
+      transition: 0.35s ease;
 
       & svg {
         margin-top: 0.1rem;
+        transition: 0.15s ease;
+
       }
 
       & svg:hover {
