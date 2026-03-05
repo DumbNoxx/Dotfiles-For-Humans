@@ -1,42 +1,19 @@
-# doftiles-for-humans
+# Dotfiles for Humans
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to Dotfiles for Humans, a minimalist portfolio migrated to **Vue**, **TypeScript**, and **Sass**. This project highlights technical skills and featured work through clean architecture and optimized performance.
 
-## Recommended IDE Setup
+## Technologies
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue**: Progressive framework for dynamic interfaces.
+- **TypeScript**: Type-safe and maintainable codebase.
+- **Sass**: Professional CSS with modular structures.
+- **Vite**: Modern build tool for rapid development.
+- **pnpm**: Fast, disk space-efficient package manager.
 
-## Recommended Browser Setup
+## License
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Apache License 2.0 - See [LICENSE](LICENSE) for details.
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
+**Configuration made human-friendly**
