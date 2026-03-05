@@ -7,8 +7,13 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bpmf+Huninn&display=swap');
-
+@font-face {
+  font-family: 'Bpmf Huninn';
+  src: url('./assets/fonts/BpmfHuninn-Regular.ttf') format('woff2');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --text-color-neutral: oklch(0.6559 0.0093 325.68);
