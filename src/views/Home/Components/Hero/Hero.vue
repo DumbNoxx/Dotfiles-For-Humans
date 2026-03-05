@@ -58,6 +58,7 @@ section {
             align-items: center;
             gap: .5em;
             transition: color .35s ease;
+            display: none;
 
             svg {
                 width: 1.2em;

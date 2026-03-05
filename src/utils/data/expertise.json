@@ -1,0 +1,104 @@
+{
+    "fnt": [
+        {
+            "type": "fnt",
+            "Name": "React",
+            "status": "stable"
+        },
+        {
+            "type": "fnt",
+            "Name": "Astro",
+            "status": "stable"
+        },
+        {
+            "type": "fnt",
+            "Name": "Vue",
+            "status": "active"
+        },
+        {
+            "type": "fnt",
+            "Name": "Angular",
+            "status": "active"
+        },
+        {
+            "type": "fnt",
+            "Name": "SaSS",
+            "status": "active"
+        }
+    ],
+    "bck": [
+        {
+            "type": "bck",
+            "Name": "Express",
+            "status": "stable"
+        },
+        {
+            "type": "bck",
+            "Name": "NestJs",
+            "status": "active"
+        },
+        {
+            "type": "bck",
+            "Name": "Hono",
+            "status": "stable"
+        },
+        {
+            "type": "bck",
+            "Name": "Flask",
+            "status": "stable"
+        },
+        {
+            "type": "bck",
+            "Name": "FastAPI",
+            "status": "stable"
+        }
+    ],
+    "mob": [
+        {
+            "type": "mob",
+            "Name": "React Native",
+            "status": "stable"
+        },
+        {
+            "type": "mob",
+            "Name": "Flutter",
+            "status": "active"
+        }
+    ],
+    "sys": [
+        {
+            "type": "sys",
+            "Name": "Go",
+            "status": "active"
+        },
+        {
+            "type": "sys",
+            "Name": "Rust",
+            "status": "stable"
+        },
+        {
+            "type": "sys",
+            "Name": "C",
+            "status": "stable"
+        },
+        {
+            "type": "sys",
+            "Name": "Zig",
+            "status": "alpha"
+        }
+    ],
+    "dsg": [
+        {
+            "type": "dsg",
+            "Name": "UI/UX Design",
+            "status": "active"
+        }
+    ],
+    "foc": [
+        {
+            "type": "foc",
+            "Name": "Perfomance Optimization",
+            "status": "active"
+        }
+    ]
+}

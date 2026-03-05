@@ -35,4 +35,12 @@ html {
   margin: 0;
   height: 100vh;
 }
+
+@media (width <=60em) {
+
+  body,
+  html {
+    padding: 1em;
+  }
+}
 </style>
