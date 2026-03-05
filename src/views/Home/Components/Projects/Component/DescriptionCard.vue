@@ -112,22 +112,23 @@ const props = withDefaults(defineProps<{
 
         .details {
             display: flex;
+            margin-top: 0;
             align-items: center;
-            min-height: 100px;
             gap: 1em;
 
             p {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 gap: .2em;
                 align-items: center;
                 min-height: 25px;
 
+
                 svg {
                     color: var(--text-color-neutral);
                     transition: .3s ease;
-                    width: 1.1em;
-                    height: 1.1em;
+                    width: .9em;
+                    height: .9em;
 
                     &:hover {
                         color: var(--text-color);
@@ -137,7 +138,7 @@ const props = withDefaults(defineProps<{
 
                 span {
                     color: var(--text-color);
-                    font-size: .70em;
+                    font-size: .75em;
 
                     &.license {
                         color: var(--text-color-neutral)
