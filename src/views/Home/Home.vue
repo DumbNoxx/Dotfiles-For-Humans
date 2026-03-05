@@ -1,8 +1,42 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import About from './Components/About/About.vue';
 import Header from './Components/Header/Header.vue';
 import Hero from './Components/Hero/Hero.vue';
 import Projects from './Components/Projects/Projects.vue';
+import type { UserApiGithub } from '@/models/userApiGithub';
+import type { RepoApiGithub } from '@/models/repoApiGithub';
+
+const userData = ref<UserApiGithub | null>(null);
+const goxeData = ref<RepoApiGithub | null>(null);
+const pomoData = ref<RepoApiGithub | null>(null);
+async function fetchGithubData() {
+    try {
+        const userPromise = fetch('https://api.github.com/users/dumbnoxx');
+        const goxePromise = fetch('https://api.github.com/repos/DumbNoxx/goxe');
+        const pomoPromise = fetch('https://api.github.com/repos/DumbNoxx/PomoHub');
+
+        const [userRes, goxeRes, pomoRes] = await Promise.all([
+            userPromise,
+            goxePromise,
+            pomoPromise
+        ]);
+
+        const [user, goxe, pomo] = await Promise.all([
+            userRes.json() as Promise<UserApiGithub>,
+            goxeRes.json() as Promise<RepoApiGithub>,
+            pomoRes.json() as Promise<RepoApiGithub>
+        ]);
+
+        userData.value = user;
+        goxeData.value = goxe;
+        pomoData.value = pomo;
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+onMounted(fetchGithubData)
 
 </script>
 
@@ -10,9 +44,9 @@ import Projects from './Components/Projects/Projects.vue';
     <main>
         <Header />
         <hr class="divider" />
-        <Hero />
+        <Hero :data="userData" />
         <hr class="divider2" />
-        <Projects />
+        <Projects :goxe="goxeData" :pom="pomoData" />
         <hr class="divider2" />
         <About />
         <hr class="divider2" />

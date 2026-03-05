@@ -1,13 +1,19 @@
 <script setup lang="ts">
+import type { RepoApiGithub } from '@/models/repoApiGithub';
 import DescriptionCard from './Component/DescriptionCard.vue';
+
+const data = defineProps<{
+    goxe: RepoApiGithub | null,
+    pom: RepoApiGithub | null
+}>();
 
 </script>
 <template>
     <section>
         <h2>MY REPOS</h2>
         <div class="repos">
-            <DescriptionCard url="https://api.github.com/repos/DumbNoxx/goxe" />
-            <DescriptionCard url="https://api.github.com/repos/DumbNoxx/PomoHub" :is-web="true" />
+            <DescriptionCard url="https://api.github.com/repos/DumbNoxx/goxe" :data="goxe" />
+            <DescriptionCard url="https://api.github.com/repos/DumbNoxx/PomoHub" :data="pom" :is-web="true" />
         </div>
     </section>
 </template>
@@ -27,7 +33,7 @@ section {
     .repos {
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 1em;
     }
 }
 </style>
