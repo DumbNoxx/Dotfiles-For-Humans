@@ -9,8 +9,8 @@
 <style>
 @font-face {
   font-family: 'Bpmf Huninn';
-  src: url('./assets/fonts/subset-BpmfHuninn-Regular.woff2') format('woff2'),
-    url('./assets/fonts/subset-BpmfHuninn-Regular.woff') format('woff');
+  src: url('/fonts/subset-BpmfHuninn-Regular.woff2') format('woff2'),
+    url('/fonts/subset-BpmfHuninn-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
