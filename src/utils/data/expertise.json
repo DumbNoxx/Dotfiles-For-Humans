@@ -2,23 +2,13 @@
     "fnt": [
         {
             "type": "fnt",
-            "Name": "React",
-            "status": "stable"
-        },
-        {
-            "type": "fnt",
-            "Name": "Astro",
-            "status": "stable"
-        },
-        {
-            "type": "fnt",
             "Name": "Vue",
             "status": "active"
         },
         {
             "type": "fnt",
             "Name": "Angular",
-            "status": "active"
+            "status": "stable"
         },
         {
             "type": "fnt",
@@ -27,11 +17,6 @@
         }
     ],
     "bck": [
-        {
-            "type": "bck",
-            "Name": "Express",
-            "status": "stable"
-        },
         {
             "type": "bck",
             "Name": "NestJs",
@@ -45,11 +30,6 @@
         {
             "type": "bck",
             "Name": "Flask",
-            "status": "stable"
-        },
-        {
-            "type": "bck",
-            "Name": "FastAPI",
             "status": "stable"
         }
     ],
@@ -70,11 +50,6 @@
             "type": "sys",
             "Name": "Go",
             "status": "active"
-        },
-        {
-            "type": "sys",
-            "Name": "Rust",
-            "status": "stable"
         },
         {
             "type": "sys",

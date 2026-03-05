@@ -57,7 +57,7 @@ const props = withDefaults(defineProps<{
                     <p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-scale-icon lucide-scale">
+                            class="lucide lucide-scale-icon lucide-scale license">
                             <path d="M12 3v18" />
                             <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
                             <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
@@ -65,7 +65,7 @@ const props = withDefaults(defineProps<{
                             <path d="M7 21h10" />
 
                         </svg>
-                        <span>{{ props.data.license?.name || 'No License' }}</span>
+                        <span class="license">{{ props.data.license?.name || 'No License' }}</span>
                     </p>
                 </div>
             </div>
@@ -112,9 +112,9 @@ const props = withDefaults(defineProps<{
 
         .details {
             display: flex;
-            justify-content: space-between;
             align-items: center;
             min-height: 100px;
+            gap: 1em;
 
             p {
                 display: flex;
@@ -124,20 +124,28 @@ const props = withDefaults(defineProps<{
                 min-height: 25px;
 
                 svg {
-                    color: var(--text-color);
+                    color: var(--text-color-neutral);
                     transition: .3s ease;
                     width: 1.1em;
                     height: 1.1em;
 
                     &:hover {
-                        color: var(--text-color-neutral);
+                        color: var(--text-color);
                         cursor: pointer;
                     }
                 }
 
                 span {
-                    color: var(--text-color-neutral);
-                    font-size: .8em;
+                    color: var(--text-color);
+                    font-size: .70em;
+
+                    &.license {
+                        color: var(--text-color-neutral)
+                    }
+
+                    &:hover {
+                        cursor: default;
+                    }
                 }
             }
         }
