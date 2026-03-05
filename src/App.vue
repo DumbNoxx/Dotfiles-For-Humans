@@ -8,13 +8,14 @@
 
 <style>
 @font-face {
-  font-family: 'Bpmf Huninn';
-  src: url('/fonts/subset-BpmfHuninn-Regular.woff2') format('woff2'),
-    url('/fonts/subset-BpmfHuninn-Regular.woff') format('woff');
+  font-family: 'Maple Mono';
+  src: url('/fonts/subset-MapleMono-Regular.woff2') format('woff2'),
+    url('/fonts/subset-MapleMono-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 
 
 :root {
@@ -38,7 +39,7 @@ body,
 html {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: "Bpmf Huninn", sans-serif;
+  font-family: "Maple Mono", sans-serif;
   margin: 0;
   height: 100vh;
 }

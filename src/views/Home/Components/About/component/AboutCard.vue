@@ -18,6 +18,5 @@ div {
         font-size: .70em;
         color: var(--text-color-neutral)
     }
-
 }
 </style>
