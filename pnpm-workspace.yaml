@@ -1,7 +1,2 @@
-packages:
-  - '.'
-
 onlyBuiltDependencies:
-  - '@parcel/watcher'
   - esbuild
-  - sharp

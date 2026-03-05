@@ -1,41 +1,11 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist"
-  ],
-  "compilerOptions": {
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@atomic/*": [
-        "./src/components/subComponents/*"
-      ],
-      "@libs/*": [
-        "./src/libs/*"
-      ],
-      "@assets/*": [
-        "./src/assets/*"
-      ],
-      "@widget/*": [
-        "./src/components/widgets/*"
-      ],
-      "@layout/*": [
-        "./src/layouts/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@helpers/*": [
-        "./src/libs/helpers/*"
-      ],
-      "*": ["./*"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
     },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  }
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
 }
