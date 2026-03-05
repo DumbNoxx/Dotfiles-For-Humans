@@ -41,7 +41,7 @@ const Data: DataExpertise = dataJson as DataExpertise;
         margin: -0.4em 0;
 
         .data-type {
-            color: oklch(71.871% 0.00008 271.152);
+            color: #7A7A7A;
             margin-right: 2em;
             min-width: 60px;
             font-weight: 300;
@@ -52,13 +52,13 @@ const Data: DataExpertise = dataJson as DataExpertise;
         }
 
         .data-name {
-            color: #9e9e9e;
+            color: #9C9C9C;
             flex-grow: 1;
             text-align: left;
             display: flex;
             gap: 0;
             transition: color .3s ease;
-            font-weight: 100;
+            font-weight: 500;
 
             &:hover {
                 color: white;
@@ -78,9 +78,10 @@ const Data: DataExpertise = dataJson as DataExpertise;
         }
 
         .data-status {
-            color: oklch(71.871% 0.00008 271.152);
+            color: #7A7A7A;
             text-align: right;
             font-weight: 300;
+            opacity: .75;
 
             &:hover {
                 cursor: default;
