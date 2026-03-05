@@ -9,11 +9,13 @@
 <style>
 @font-face {
   font-family: 'Bpmf Huninn';
-  src: url('./assets/fonts/BpmfHuninn-Regular.ttf') format('woff2');
-  font-display: swap;
+  src: url('./assets/fonts/subset-BpmfHuninn-Regular.woff2') format('woff2'),
+    url('./assets/fonts/subset-BpmfHuninn-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
+
 
 :root {
   --text-color-neutral: oklch(0.6559 0.0093 325.68);

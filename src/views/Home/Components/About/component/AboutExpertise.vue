@@ -81,7 +81,6 @@ const Data: DataExpertise = dataJson as DataExpertise;
             color: #7A7A7A;
             text-align: right;
             font-weight: 300;
-            opacity: .75;
 
             &:hover {
                 cursor: default;
