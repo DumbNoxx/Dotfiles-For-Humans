@@ -13,7 +13,7 @@
 :root {
   --text-color-neutral: oklch(0.6559 0.0093 325.68);
   --text-color: oklch(0.9384 0.0029 308.43);
-  --bg-color: oklch(0.1438 0.0073 314.7);
+  --bg-color: oklch(14.385% 0.00732 314.618);
   --divider-color: oklch(34.846% 0.00004 271.152);
 
 
