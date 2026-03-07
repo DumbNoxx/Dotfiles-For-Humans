@@ -3,7 +3,6 @@ import type { RepoApiGithub } from "@/models/repoApiGithub";
 
 
 const props = withDefaults(defineProps<{
-    url: string,
     isWeb?: boolean,
     data: RepoApiGithub | null
 

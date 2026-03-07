@@ -12,8 +12,8 @@ const data = defineProps<{
     <section>
         <h2>MY REPOS</h2>
         <div class="repos">
-            <DescriptionCard url="https://api.github.com/repos/DumbNoxx/goxe" :data="goxe" />
-            <DescriptionCard url="https://api.github.com/repos/DumbNoxx/PomoHub" :data="pom" :is-web="true" />
+            <DescriptionCard :data="goxe" />
+            <DescriptionCard :data="pom" />
         </div>
     </section>
 </template>

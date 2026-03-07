@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import SvgIcon from '@/components/atoms/Svg/Svg.vue';
+import { useWebsocket } from '@/composables/socket';
+import DynamicComponent from './component/DynamicComponent.vue';
 
+const { socket, data } = useWebsocket();
+socket.onopen = () => { };
 </script>
 
 <template>
     <header>
         <div class="status-data">
-            <div class="status"></div>
-            <p>Available for projects</p>
+            <DynamicComponent :data="data" />
+
         </div>
         <div class="buttons-tools">
             <SvgIcon href="https://github.com/dumbnoxx/" target="_blank" aria-label="github">
@@ -59,24 +63,6 @@ header {
     flex-direction: row;
     align-items: center;
     gap: .3em;
-
-    p {
-        color: var(--text-color-neutral);
-        font-size: 0.8em;
-        font-weight: 400;
-
-        &:hover {
-            cursor: default;
-        }
-    }
-
-    .status {
-        width: .34em;
-        height: .34em;
-        border-radius: 5em;
-
-        animation: statusLight 2s linear infinite;
-    }
 }
 
 .buttons-tools {
@@ -87,7 +73,7 @@ header {
 
 }
 
-@keyframes statusLight {
+@keyframes statusLightOffline {
 
     0%,
     100% {

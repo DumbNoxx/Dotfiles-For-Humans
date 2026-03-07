@@ -14,7 +14,7 @@ async function fetchGithubData() {
     try {
         const userPromise = fetch('https://api.github.com/users/dumbnoxx');
         const goxePromise = fetch('https://api.github.com/repos/DumbNoxx/goxe');
-        const pomoPromise = fetch('https://api.github.com/repos/DumbNoxx/PomoHub');
+        const pomoPromise = fetch('https://api.github.com/repos/DumbNoxx/pulse.nvim');
 
         const [userRes, goxeRes, pomoRes] = await Promise.all([
             userPromise,
