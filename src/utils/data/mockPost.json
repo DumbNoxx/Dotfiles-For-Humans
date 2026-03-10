@@ -1,0 +1,30 @@
+[
+    {
+        "id": "mi-primera-experiencia-con-vue",
+        "titleData": "Mi primera experiencia con Vue",
+        "publishData": "Mar 4, 2026",
+        "shortMessage": "Un resumen de cómo fue aprender Vue en 2026.",
+        "message": "<h2>La evolución de Vue</h2><p>Vue ha evolucionado muchísimo. En este post te cuento cómo la <strong>Composition API</strong> me cambió la forma de ver el desarrollo frontend.</p><p>Lo prefiero sobre otros frameworks por su curva de aprendizaje y flexibilidad.</p>"
+    },
+    {
+        "id": "configurando-cloudflare-pages",
+        "titleData": "Configurando Cloudflare Pages",
+        "publishData": "Mar 5, 2026",
+        "shortMessage": "Guía rápida para desplegar blogs estáticos.",
+        "message": "<h2>Despliegue Global</h2><p>Desplegar en <strong>Cloudflare Pages</strong> es ridículamente rápido. Solo conectas tu repo de GitHub y en segundos tienes una red global distribuyendo tu blog.</p><ul><li>Sin servidores tradicionales.</li><li>SSL automático.</li><li>Funciones Edge.</li></ul>"
+    },
+    {
+        "id": "el-poder-de-las-computed-properties",
+        "titleData": "El poder de las Computed Properties",
+        "publishData": "Mar 6, 2026",
+        "shortMessage": "Por qué deberías usar computed en lugar de methods.",
+        "message": "<h2>Caché Inteligente</h2><p>La caché es la clave. Si tienes cálculos pesados o búsquedas en listas largas, el <code>computed</code> evita que tu app trabaje de más.</p><p>Mantiene todo sincronizado con el estado de forma eficiente.</p>"
+    },
+    {
+        "id": "manejando-errores-404-dinamicos",
+        "titleData": "Manejando errores 404 dinámicos",
+        "publishData": "Mar 7, 2026",
+        "shortMessage": "No dejes que tus usuarios se pierdan.",
+        "message": "<h2>Experiencia de Usuario</h2><p>Cuando un usuario intenta acceder a un post que no existe, es vital redirigirlo elegantemente.</p><p>Usar <code>router.push</code> dentro de un <em>watch</em> es la mejor forma de manejar esto en Vue 3.</p>"
+    }
+]

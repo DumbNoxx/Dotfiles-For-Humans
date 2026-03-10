@@ -126,8 +126,8 @@ const props = withDefaults(defineProps<{
                 svg {
                     color: var(--text-color-neutral);
                     transition: .3s ease;
-                    width: .9em;
-                    height: .9em;
+                    width: .95em;
+                    height: .95em;
 
                     &:hover {
                         color: var(--text-color);

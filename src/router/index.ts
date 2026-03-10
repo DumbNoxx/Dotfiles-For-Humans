@@ -6,8 +6,43 @@ const router = createRouter({
     {
       path: "/",
       component: () => import("../views/Home/Home.vue")
-    }
+    },
+    {
+      path: "/blog",
+      component: () => import("../views/Blog/Blog.vue")
+    },
+    {
+      path: "/blog/:id",
+      component: () => import("../views/Post/Post.vue")
+    },
+    {
+      path: "/:pathMatch(.*)*", name: "NotFound", component: () => import("../views/404/404.vue")
+    },
+    {
+      path: "/admin",
+      component: () => import("../views/admin/Admin.vue"),
+      children: [
+        { path: "", component: () => import("../views/admin/subRoutes/Login.vue") },
+        { path: "dashboard", meta: { requiresAuth: true }, component: () => import("../views/admin/subRoutes/Dashboard.vue") },
+        { path: "editor", meta: { requiresAuth: true }, component: () => import("../views/admin/subRoutes/Editor.vue") },
+      ]
+    },
+
   ],
 })
+
+router.beforeEach(async (to, from, next) => {
+  if (to.meta.requiresAuth) {
+    const res = await fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/admin/api/me", {
+      credentials: "include"
+    })
+    if (!res.ok) {
+      return {
+        name: "NotFound"
+      }
+    }
+  }
+  next()
+});
 
 export default router

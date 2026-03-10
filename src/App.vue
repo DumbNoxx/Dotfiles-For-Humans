@@ -1,9 +1,46 @@
 <script setup lang="ts">
+import { transition } from '@vueuse/core';
+import Header from './components/Header/Header.vue';
 </script>
 
 <template>
+  <UApp>
+    <header>
+      <nav>
+        <Header />
+      </nav>
+    </header>
+    <hr class="divider" />
 
-  <router-view />
+    <main>
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p>Apache License 2025</p>
+        <p>Designed & Developed by Dylan Marcano</p>
+      </div>
+      <div class="friends">
+        <p>Friends &hearts;</p>
+        <div class="urls">
+          <div class="group">
+            <a href="https://elisiei.xyz/" target="_blank">@elisiei</a>
+            <a href="https://chiko.dev/" target="_blank">@chiko</a>
+            <a href="https://goat.seyfert.dev/" target="_blank">@marcrock22</a>
+          </div>
+          <div class="group">
+            <a href="https://estebandev.cc/" target="_blank">@esteban</a>
+            <a href="https://ulysses-portfolio.vercel.app/" target="_blank">@ulysses</a>
+            <a href="https://ldarki.dev.ar/" target="_blank">@ldarki</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </UApp>
 </template>
 
 <style>
@@ -41,7 +78,26 @@ html {
   color: var(--text-color);
   font-family: "Maple Mono", sans-serif;
   margin: 0;
-  height: 100vh;
+
+  main {
+    max-width: 40em;
+    margin: 0 auto;
+
+  }
+
+  .divider {
+    position: relative;
+    left: 50%;
+    right: 50%;
+
+    border: none;
+    border-top: 1px solid var(--divider-color);
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+
+  }
 }
 
 @media (width <=60em) {
@@ -50,5 +106,61 @@ html {
   html {
     padding: 1em;
   }
+}
+
+footer {
+  min-height: 7em;
+  max-width: 40em;
+  margin: 0 auto;
+  margin-top: .4em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .copyright {
+    p {
+      font-size: .75em;
+      color: var(--text-color-neutral)
+    }
+  }
+
+  .friends {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      text-align: center;
+      font-size: .75em;
+
+    }
+
+    .urls {
+      display: flex;
+      gap: 2em;
+
+      .group {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+
+        a {
+          text-decoration: none;
+          color: var(--text-color-neutral);
+          transition: .3s ease;
+          font-size: .75em;
+
+          &:hover {
+            color: var(--text-color);
+          }
+        }
+
+
+      }
+    }
+  }
+
+
+
 }
 </style>

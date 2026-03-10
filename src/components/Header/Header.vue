@@ -3,15 +3,13 @@ import SvgIcon from '@/components/atoms/Svg/Svg.vue';
 import { useWebsocket } from '@/composables/socket';
 import DynamicComponent from './component/DynamicComponent.vue';
 
-const { socket, data } = useWebsocket();
-socket.onopen = () => { };
+const { data } = useWebsocket();
 </script>
 
 <template>
     <header>
         <div class="status-data">
             <DynamicComponent :data="data" />
-
         </div>
         <div class="buttons-tools">
             <SvgIcon href="https://github.com/dumbnoxx/" target="_blank" aria-label="github">
