@@ -82,6 +82,7 @@ html {
   main {
     max-width: 40em;
     margin: 0 auto;
+    min-height: 60vh;
 
   }
 

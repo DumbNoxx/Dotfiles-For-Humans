@@ -16,7 +16,7 @@ const dataGh = defineProps<{
             <p v-if="!dataGh.data" class="skeleton-bio"></p>
             <p v-else>{{ dataGh.data.bio }}</p>
             <div class="button-navs">
-                <a href="mailto:nxusdev@protonmail.com">
+                <a href="mailto:nxusdev@protonmail.com" aria-label="Sent me email">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-mail-icon lucide-mail boca">
@@ -24,7 +24,7 @@ const dataGh = defineProps<{
                         <rect x="2" y="4" width="20" height="16" rx="2" pathLength="1" />
                     </svg>
                 </a>
-                <RouterLink to="/blog" view-transition>
+                <RouterLink to="/blog" view-transition aria-label="Go to blog">
                     <svg fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
