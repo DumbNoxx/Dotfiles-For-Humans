@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const logout = async () => {
-    fetch("http://localhost:8787/api/admin/api/logout", {
+    fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/admin/api/logout", {
         method: "POST",
         credentials: "include"
     }).then(response => response.json())
