@@ -115,7 +115,7 @@ div {
         margin-top: 7em;
         margin-bottom: 7em;
 
-        pre {
+        :deep(pre) {
             code {
                 display: block;
                 white-space: pre;
