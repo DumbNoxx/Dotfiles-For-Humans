@@ -119,6 +119,10 @@ footer {
   justify-content: space-between;
   align-items: center;
 
+  &:hover {
+    cursor: default;
+  }
+
   .copyright {
     p {
       font-size: .75em;
