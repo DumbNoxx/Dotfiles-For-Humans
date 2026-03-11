@@ -73,6 +73,8 @@ const formatData = formatDate(data?.value?.PublishData)
 </template>
 <style lang="css" scoped>
 div {
+    min-height: 60vh;
+
     &:hover {
         cursor: default;
     }
