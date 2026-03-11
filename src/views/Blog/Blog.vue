@@ -2,9 +2,32 @@
 import Divider from '@/components/atoms/Divider/Divider.vue';
 import CardPostBlog from './Components/CardPostBlog.vue';
 import { PostsData, formatDate } from '@/service/blogs';
+import { useHead } from '@unhead/vue';
 const Data = PostsData;
 
-
+useHead({
+    title: 'Blog | Insights on Design & Architecture',
+    meta: [
+        {
+            name: 'description',
+            content: 'Essays on software architecture, minimalist design, and the practical challenges of modern web development.'
+        },
+        { property: 'og:title', content: 'Blog | Essays & Notes' },
+        {
+            property: 'og:description',
+            content: 'Thoughts on design, architecture, and the real cost of observability.'
+        },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://nxus.pages.dev/blog' },
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:title', content: 'Blog | Design & Architecture' },
+        {
+            name: 'twitter:description',
+            content: 'Exploring the intersection of performance and minimalist web development.'
+        },
+        { name: 'theme-color', content: '#000000' }
+    ],
+})
 </script>
 <template>
     <div>
