@@ -129,6 +129,13 @@ const formatData = formatDate(data?.value?.PublishData)
         p {
             a {
                 overflow-wrap: anywhere;
+                text-decoration: none;
+                color: var(--text-color-neutral);
+                transition: color .3s ease;
+
+                &:hover {
+                    color: var(--text-color);
+                }
             }
         }
     }
