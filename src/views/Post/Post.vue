@@ -46,7 +46,7 @@ const formatData = formatDate(data?.value?.PublishData)
 
 </script>
 <template>
-    <div>
+    <div class="post">
         <nav>
             <RouterLink to="/blog" view-transition class="back-to-home">
                 <span>←</span><span id="text">Back to Blog</span>
@@ -72,7 +72,7 @@ const formatData = formatDate(data?.value?.PublishData)
     </div>
 </template>
 <style lang="css">
-div {
+.post {
     min-height: 100vh;
 
     &:hover {
