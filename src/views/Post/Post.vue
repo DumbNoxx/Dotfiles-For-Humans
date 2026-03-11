@@ -125,6 +125,12 @@ const formatData = formatDate(data?.value?.PublishData)
                 border-radius: 4px;
             }
         }
+
+        p {
+            a {
+                overflow-wrap: anywhere;
+            }
+        }
     }
 
 }
