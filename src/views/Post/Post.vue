@@ -79,6 +79,15 @@ div {
         cursor: default;
     }
 
+    code {
+        display: block;
+        white-space: pre;
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 0.5em;
+        border-radius: 4px;
+    }
+
     .back-to-home {
         margin-top: 4em;
         text-decoration: none;
