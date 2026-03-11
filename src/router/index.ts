@@ -31,7 +31,7 @@ const router = createRouter({
   ],
 })
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach(async (to) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     const res = await fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/admin/api/me", {
       credentials: "include"
