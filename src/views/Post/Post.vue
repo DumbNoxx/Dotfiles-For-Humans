@@ -1,15 +1,47 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { computed, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import Divider from '@/components/atoms/Divider/Divider.vue';
 import { PostsData, formatDate } from '@/service/blogs';
 const dataPost = PostsData;
-const d = dataPost.value?.map(d => d)
+const loading = ref<boolean>(false);
 
 const route = useRoute()
 const data = computed(() => {
-    return d?.find(p => p.PostId === route.params.id)
-});
+    return dataPost.value?.find(p => p.PostId === route.params.id);
+})
+const fetchData = async (id: string) => {
+    loading.value = true;
+    try {
+        const res = await fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ PostId: id })
+        });
+        const json = await res.json();
+
+        PostsData.value?.push(json);
+    } finally {
+        loading.value = false;
+    }
+};
+const normalizeId = (raw: unknown): string | null => {
+    if (!raw) return null;
+    if (Array.isArray(raw)) return String(raw[0]);
+    return String(raw);
+};
+
+watch(
+    () => route.params.id,
+    (raw) => {
+        const id = normalizeId(raw);
+        if (!id) return;
+        if (!PostsData.value?.some(p => p.PostId === id) && !loading.value) {
+            fetchData(id);
+        }
+    },
+    { immediate: true }
+);
 const formatData = formatDate(data?.value?.PublishData)
 
 </script>
@@ -20,14 +52,21 @@ const formatData = formatDate(data?.value?.PublishData)
                 <span>←</span><span id="text">Back to Blog</span>
             </RouterLink>
         </nav>
-        <div v-if="data">
-            <h1>{{ data?.TitleData }}</h1>
-            <p class="publishData">{{ formatData }}</p>
-            <div class="message" v-html="data?.Message"></div>
+        <div v-if="loading">
+            <div class="skeleton-title"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
         </div>
         <div v-else>
-            <h1>Ups</h1>
-            <p>Post not Found</p>
+            <div v-if="data">
+                <h1>{{ data?.TitleData }}</h1>
+                <p class="publishData">{{ formatData }}</p>
+                <div class="message" v-html="data?.Message"></div>
+            </div>
+            <div v-else>
+                <h1>Ups</h1>
+                <p>Post not Found</p>
+            </div>
         </div>
         <Divider />
     </div>

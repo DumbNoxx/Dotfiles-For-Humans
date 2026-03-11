@@ -4,6 +4,7 @@ import CardPostBlog from './Components/CardPostBlog.vue';
 import { PostsData, formatDate } from '@/service/blogs';
 const Data = PostsData;
 
+
 </script>
 <template>
     <div>
