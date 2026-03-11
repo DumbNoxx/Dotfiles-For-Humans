@@ -71,7 +71,7 @@ const formatData = formatDate(data?.value?.PublishData)
         <Divider />
     </div>
 </template>
-<style lang="css" scoped>
+<style lang="css">
 div {
     min-height: 100vh;
 
@@ -115,7 +115,7 @@ div {
         margin-top: 7em;
         margin-bottom: 7em;
 
-        :deep(pre) {
+        pre {
             code {
                 display: block;
                 white-space: pre;
