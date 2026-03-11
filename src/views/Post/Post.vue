@@ -115,13 +115,15 @@ div {
         margin-top: 7em;
         margin-bottom: 7em;
 
-        code {
-            display: block;
-            white-space: pre;
-            overflow-x: auto;
-            max-width: 100%;
-            padding: 0.5em;
-            border-radius: 4px;
+        pre {
+            code {
+                display: block;
+                white-space: pre;
+                overflow-x: auto;
+                max-width: 100%;
+                padding: 0.5em;
+                border-radius: 4px;
+            }
         }
     }
 
