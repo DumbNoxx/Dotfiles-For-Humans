@@ -3,6 +3,7 @@ import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import Divider from '@/components/atoms/Divider/Divider.vue';
 import { PostsData, formatDate } from '@/service/blogs';
+import { useHead } from '@unhead/vue';
 const dataPost = PostsData;
 const loading = ref<boolean>(false);
 
@@ -42,7 +43,10 @@ watch(
     },
     { immediate: true }
 );
-const formatData = formatDate(data?.value?.PublishData)
+const formatData = formatDate(data?.value?.PublishData);
+useHead({
+    title: data.value?.TitleData
+});
 
 </script>
 <template>
