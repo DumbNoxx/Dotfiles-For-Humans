@@ -1,9 +1,15 @@
 export async function onRequest(context) {
-  const { request, params, env } = context;
+  const { request, params } = context;
   const url = new URL(request.url);
   const postId = params.id;
 
-  const response = await context.next();;
+  const newRequest = new Request(request);
+  newRequest.headers.delete("if-none-match");
+  newRequest.headers.delete("if-modified-since");
+
+  const response = await context.next(newRequest);
+
+  if (response.status !== 200) return response;
 
   try {
     const apiRes = await fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
@@ -16,11 +22,11 @@ export async function onRequest(context) {
 
     const postData = await apiRes.json();
     const cleanDescription = postData.Message
-      .replace(/<[^>]*>/g, '')
+      ?.replace(/<[^>]*>/g, '')
       .substring(0, 160)
-      .trim();
+      .trim() || "";
 
-    return new HTMLRewriter()
+    const rewrittenResponse = new HTMLRewriter()
       .on('title', {
         element(e) {
           e.setInnerContent(`${postData.TitleData} | Nxus`);
@@ -34,10 +40,14 @@ export async function onRequest(context) {
           e.append(`<meta property="og:type" content="article">`, { html: true });
           e.append(`<meta name="description" content="${cleanDescription}">`, { html: true });
           e.append(`<meta name="twitter:card" content="summary_large_image">`, { html: true });
-          e.append(`<meta name="twitter:title" content="${postData.TitleData}">`, { html: true });
         }
       })
       .transform(response);
+
+    const finalResponse = new Response(rewrittenResponse.body, rewrittenResponse);
+    finalResponse.headers.set("Cache-Control", "no-cache, no-store, must-revalidate");
+    
+    return finalResponse;
 
   } catch (err) {
     return response;
