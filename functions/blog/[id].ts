@@ -3,7 +3,7 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const postId = params.id;
 
-  const response = await env.ASSETS.fetch(request);
+  const response = await context.next();;
 
   try {
     const apiRes = await fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
