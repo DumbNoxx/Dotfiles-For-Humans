@@ -11,7 +11,6 @@ import Header from './components/Header/Header.vue';
       </nav>
     </header>
     <hr class="divider" />
-
     <main>
       <router-view v-slot="{ Component }">
         <transition name="fade">

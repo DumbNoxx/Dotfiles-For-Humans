@@ -3,7 +3,16 @@ import Divider from '@/components/atoms/Divider/Divider.vue';
 import CardPostBlog from './Components/CardPostBlog.vue';
 import { PostsData, formatDate } from '@/service/blogs';
 import { useHead } from '@unhead/vue';
+import { computed } from 'vue';
 const Data = PostsData;
+
+const sortedPosts = computed(() => {
+    if (!Data.value) return [];
+    
+    return [...Data.value].sort((a, b) => {
+        return new Date(b.PublishData).getTime() - new Date(a.PublishData).getTime();
+    });
+});
 
 useHead({
     title: 'Blog | Insights on Design & Architecture',
@@ -43,7 +52,7 @@ useHead({
         </div>
 
         <div v-else-if="Data.length > 0" class="postList">
-            <CardPostBlog v-for="post in Data" :key="post.PostId" :publish-data="formatDate(post.PublishData)"
+            <CardPostBlog v-for="post in sortedPosts" :key="post.PostId" :publish-data="formatDate(post.PublishData)"
                 :title-data="post.TitleData" :short-message="post.ShorMessage" :url-post="'/blog/' + post.PostId" />
         </div>
 

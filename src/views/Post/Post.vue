@@ -83,8 +83,6 @@ useHead({
         cursor: default;
     }
 
-
-
     .back-to-home {
         margin-top: 4em;
         text-decoration: none;
