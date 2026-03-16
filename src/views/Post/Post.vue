@@ -3,7 +3,7 @@ import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import Divider from '@/components/atoms/Divider/Divider.vue';
 import { PostsData, formatDate } from '@/service/blogs';
-import { useHead } from '@unhead/vue';
+import { useHead, useSeoMeta } from '@unhead/vue';
 const dataPost = PostsData;
 const loading = ref<boolean>(false);
 
@@ -49,26 +49,28 @@ const formatData = computed(() => {
 });
 
 useHead({
-  title: () => data.value ? `${data.value.TitleData} | Nxus` : 'Post not found',
-description: () => {
-    if (!data.value?.Message) return 'Read the latest post on Nxus development blog.';
-    return data.value.Message
+  title: () => data.value?.TitleData, // Solo pasas el valor
+  titleTemplate: (title) => title ? `${title} | Nxus` : 'Post not found',
+});
+
+useSeoMeta({
+  description: () => {
+    const message = data.value?.Message;
+    if (!message) return 'Read the latest post on Nxus development blog.';
+    return message
       .replace(/<[^>]*>/g, '') 
       .substring(0, 160)
-      .concat('...');
+      .trim() + '...';
   },
-
   ogTitle: () => data.value?.TitleData,
   ogDescription: () => {
-    return data.value?.Message
-      .replace(/<[^>]*>/g, '')
-      .substring(0, 150);
+    return data.value?.Message?.replace(/<[^>]*>/g, '').substring(0, 150);
   },
   ogUrl: () => `https://nxus.pages.dev/blog/${route.params.id}`,
   ogType: 'article',
+  // @ts-ignore - Algunos motores de búsqueda requieren formatos específicos
   articlePublishedTime: () => data.value?.PublishData,
   articleAuthor: ['Dylan Marcano'],
-  
   twitterCard: 'summary_large_image',
   twitterTitle: () => data.value?.TitleData,
 });
