@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { createHead } from '@unhead/vue';
+import { createHead } from '@unhead/vue/client';
 import ui from '@nuxt/ui/vue-plugin'
 
 const app = createApp(App)
