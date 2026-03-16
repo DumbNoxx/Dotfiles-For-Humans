@@ -116,6 +116,20 @@ useHead({
     .message {
         margin-top: 7em;
         margin-bottom: 7em;
+        img {
+            max-width: 100%;    
+            height: auto;       
+            display: block;     
+            margin: 2em auto;  
+            border-radius: 8px; 
+            border: 1px solid var(--text-color-neutral); 
+            opacity: 0.9;       
+            transition: opacity 0.3s ease;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
 
         pre {
             code {
