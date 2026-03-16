@@ -49,7 +49,28 @@ const formatData = computed(() => {
 });
 
 useHead({
-    title: data.value?.TitleData
+  title: () => data.value ? `${data.value.TitleData} | Nxus` : 'Post not found',
+description: () => {
+    if (!data.value?.Message) return 'Read the latest post on Nxus development blog.';
+    return data.value.Message
+      .replace(/<[^>]*>/g, '') 
+      .substring(0, 160)
+      .concat('...');
+  },
+
+  ogTitle: () => data.value?.TitleData,
+  ogDescription: () => {
+    return data.value?.Message
+      .replace(/<[^>]*>/g, '')
+      .substring(0, 150);
+  },
+  ogUrl: () => `https://nxus.pages.dev/blog/${route.params.id}`,
+  ogType: 'article',
+  articlePublishedTime: () => data.value?.PublishData,
+  articleAuthor: ['Dylan Marcano'],
+  
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => data.value?.TitleData,
 });
 
 </script>
