@@ -5,10 +5,8 @@ export async function onRequest(context) {
 
   const newRequest = new Request(request);
   newRequest.headers.delete("if-none-match");
-  newRequest.headers.delete("if-modified-since");
-
+  
   const response = await context.next(newRequest);
-
   if (response.status !== 200) return response;
 
   try {
@@ -19,35 +17,36 @@ export async function onRequest(context) {
     });
 
     if (!apiRes.ok) return response;
-
     const postData = await apiRes.json();
+    
     const cleanDescription = postData.Message
       ?.replace(/<[^>]*>/g, '')
       .substring(0, 160)
       .trim() || "";
 
-    const rewrittenResponse = new HTMLRewriter()
+    return new HTMLRewriter()
       .on('title', {
-        element(e) {
-          e.setInnerContent(`${postData.TitleData} | Nxus`);
-        }
+        element(e) { e.setInnerContent(`${postData.TitleData} | Nxus`); }
+      })
+      .on('meta[name="description"]', {
+        element(e) { e.setAttribute('content', cleanDescription); }
+      })
+      .on('meta[property="og:title"]', {
+        element(e) { e.setAttribute('content', postData.TitleData); }
+      })
+      .on('meta[property="og:description"]', {
+        element(e) { e.setAttribute('content', cleanDescription); }
+      })
+      .on('meta[property="og:url"]', {
+        element(e) { e.setAttribute('content', url.href); }
       })
       .on('head', {
         element(e) {
-          e.append(`<meta property="og:title" content="${postData.TitleData}">`, { html: true });
-          e.append(`<meta property="og:description" content="${cleanDescription}">`, { html: true });
-          e.append(`<meta property="og:url" content="${url.href}">`, { html: true });
-          e.append(`<meta property="og:type" content="article">`, { html: true });
-          e.append(`<meta name="description" content="${cleanDescription}">`, { html: true });
+          e.append(`<meta name="twitter:title" content="${postData.TitleData}">`, { html: true });
           e.append(`<meta name="twitter:card" content="summary_large_image">`, { html: true });
         }
       })
       .transform(response);
-
-    const finalResponse = new Response(rewrittenResponse.body, rewrittenResponse);
-    finalResponse.headers.set("Cache-Control", "no-cache, no-store, must-revalidate");
-    
-    return finalResponse;
 
   } catch (err) {
     return response;
