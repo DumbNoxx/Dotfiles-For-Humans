@@ -48,32 +48,6 @@ const formatData = computed(() => {
     return data.value ? formatDate(data.value.PublishData) : '';
 });
 
-useHead({
-  title: () => data.value?.TitleData, // Solo pasas el valor
-  titleTemplate: (title) => title ? `${title} | Nxus` : 'Post not found',
-});
-
-useSeoMeta({
-  description: () => {
-    const message = data.value?.Message;
-    if (!message) return 'Read the latest post on Nxus development blog.';
-    return message
-      .replace(/<[^>]*>/g, '') 
-      .substring(0, 160)
-      .trim() + '...';
-  },
-  ogTitle: () => data.value?.TitleData,
-  ogDescription: () => {
-    return data.value?.Message?.replace(/<[^>]*>/g, '').substring(0, 150);
-  },
-  ogUrl: () => `https://nxus.pages.dev/blog/${route.params.id}`,
-  ogType: 'article',
-  // @ts-ignore - Algunos motores de búsqueda requieren formatos específicos
-  articlePublishedTime: () => data.value?.PublishData,
-  articleAuthor: ['Dylan Marcano'],
-  twitterCard: 'summary_large_image',
-  twitterTitle: () => data.value?.TitleData,
-});
 
 </script>
 <template>
