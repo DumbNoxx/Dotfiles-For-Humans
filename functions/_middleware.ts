@@ -6,7 +6,8 @@ export async function onRequest(context) {
     const segments = url.pathname.split('/').filter(Boolean);
     const postId = segments[segments.length - 1];
 
-    const response = await next();
+    const assetUrl = new URL('/index.html', url.origin);
+    const indexResponse = await env.ASSETS.fetch(assetUrl);
 
     try {
       const apiRes = await fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
@@ -20,9 +21,18 @@ export async function onRequest(context) {
         const cleanDesc = postData.Message?.replace(/<[^>]*>/g, '').substring(0, 160).trim() || "";
 
         return new HTMLRewriter()
-          .on('title', { element(e) { e.setInnerContent(`${postData.TitleData} | Nxus`); } })
-          .on('meta[property="og:title"]', { element(e) { e.setAttribute('content', postData.TitleData); } })
-          .on('meta[name="description"]', { element(e) { e.setAttribute('content', cleanDesc); } })
+          .on('title', { 
+            element(e) { e.setInnerContent(`${postData.TitleData} | Nxus`); } 
+          })
+          .on('meta[name="description"]', { 
+            element(e) { e.setAttribute('content', cleanDesc); } 
+          })
+          .on('meta[property="og:title"]', { 
+            element(e) { e.setAttribute('content', postData.TitleData); } 
+          })
+          .on('meta[property="og:description"]', { 
+            element(e) { e.setAttribute('content', cleanDesc); } 
+          })
           .on('head', {
             element(e) {
               e.append(`<meta property="og:url" content="${url.href}">`, { html: true });
@@ -30,10 +40,10 @@ export async function onRequest(context) {
               e.append(``, { html: true });
             }
           })
-          .transform(response);
+          .transform(indexResponse);
       }
     } catch (err) {
-      return response;
+      return indexResponse;
     }
   }
 
