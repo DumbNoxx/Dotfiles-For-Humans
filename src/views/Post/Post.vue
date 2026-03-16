@@ -43,7 +43,11 @@ watch(
     },
     { immediate: true }
 );
-const formatData = formatDate(data?.value?.PublishData);
+
+const formatData = computed(() => {
+    return data.value ? formatDate(data.value.PublishData) : '';
+});
+
 useHead({
     title: data.value?.TitleData
 });
