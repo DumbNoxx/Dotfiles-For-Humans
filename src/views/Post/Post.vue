@@ -3,7 +3,7 @@ import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import Divider from '@/components/atoms/Divider/Divider.vue';
 import { PostsData, formatDate } from '@/service/blogs';
-import { useHead, useSeoMeta } from '@unhead/vue';
+import { useHead } from '@unhead/vue';
 const dataPost = PostsData;
 const loading = ref<boolean>(false);
 
@@ -48,6 +48,9 @@ const formatData = computed(() => {
     return data.value ? formatDate(data.value.PublishData) : '';
 });
 
+useHead({
+    title: data.value?.TitleData
+});
 
 </script>
 <template>
