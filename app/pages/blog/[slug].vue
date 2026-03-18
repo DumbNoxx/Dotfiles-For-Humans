@@ -62,13 +62,13 @@ const formatData = computed(() => {
     return datas.value ? formatDate(datas.value.PublishData) : '';
 });
 useSeoMeta({
-    title: () => datas?.TitleData,
-    description: () => datas?.ShorMessage,
-    ogTitle: () => datas?.TitleData,
-    ogDescription: () => datas?.ShorMessage,
+    title: () => datas?.value.TitleData,
+    description: () => datas?.value.ShorMessage,
+    ogTitle: () => datas?.value.TitleData,
+    ogDescription: () => datas?.value.ShorMessage,
     twitterCard: "sumary",
-    twitterTitle: () => datas?.TitleData,
-    twitterDescription: () => datas?.ShorMessage 
+    twitterTitle: () => datas?.value.TitleData,
+    twitterDescription: () => datas?.value.ShorMessage 
 })
 
 useHead({
