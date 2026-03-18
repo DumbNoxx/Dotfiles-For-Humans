@@ -67,7 +67,7 @@ useSeoMeta({
     ogTitle: datas?.TitleData,
     ogDescription: datas?.ShorMessage,
     twitterCard: "sumary",
-    twitterTitle: data?.TitleData,
+    twitterTitle: datas?.TitleData,
     twitterDescription: datas?.ShorMessage 
 })
 
