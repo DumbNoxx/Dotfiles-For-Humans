@@ -6,7 +6,7 @@ const dataPost = posts;
 const loading = ref<boolean>(false);
 
 const route = useRoute()
-constdatas = computed(() => {
+const datas = computed(() => {
     return dataPost.value?.find(p => p.PostId === route.params.id);
 })
 const fetchData = async (id: string) => {
