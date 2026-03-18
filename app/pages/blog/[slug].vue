@@ -9,22 +9,25 @@ const { data: posts } = await useFetch<any[]>("https://nxus-api-blog.nxus-dev.wo
 const cachePosts = ref<unknown[]>([]);
 
 const datas = computed(() => {
-    const id = route.params.id;
+    const id = normalizeId(route.params.id);
+    if (!id) {
+    console.log("err: undefined id")
+    return null;
+    }
     
-    let post = posts.value?.find(p => String(p.PostId) === String(id));
+    let post = posts.value?.find(p => String(p.PostId) === id);
     
     if (!post) {
-        post = cachePosts.value.find(p => String(p.PostId) === String(id));
+        post = cachePosts.value.find(p => String(p.PostId) === id);
     }
 
-    console.log("Buscando ID:", id, "Post encontrado:", post?.PostId);
+    console.log("ID:", id, "Post:", post?.PostId);
     return post;
 });
 
 const fetchData = async (id: string) => {
     loading.value = true;
     try {
-        // Nota: Cambié res.json() porque useFetch ya devuelve la data procesada
         const { data } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
             method: 'POST',
             body: { PostId: id }
