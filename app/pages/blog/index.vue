@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Posts } from "#shared/types/postData";
-const { data: posts, status } = await useAsyncData("all-post", () => getPost())
+const { data:posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
 import { computed } from 'vue';
 const Data = posts;
 
