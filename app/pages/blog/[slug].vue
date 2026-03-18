@@ -64,7 +64,7 @@ const formatData = computed(() => {
 useSeoMeta({
     title: datas?.TitleData,
     description: datas?.ShorMessage,
-    ogTitle: data?.TitleData,
+    ogTitle: datas?.TitleData,
     ogDescription: datas?.ShorMessage,
     twitterCard: "sumary",
     twitterTitle: data?.TitleData,
