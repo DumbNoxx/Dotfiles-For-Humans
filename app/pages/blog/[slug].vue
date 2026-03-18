@@ -6,7 +6,7 @@ const dataPost = posts;
 const loading = ref<boolean>(false);
 
 const route = useRoute()
-const data = computed(() => {
+constdatas = computed(() => {
     return dataPost.value?.find(p => p.PostId === route.params.id);
 })
 const fetchData = async (id: string) => {
@@ -43,11 +43,11 @@ watch(
 );
 
 const formatData = computed(() => {
-    return data.value ? formatDate(data.value.PublishData) : '';
+    return datas.value ? formatDate(datas.value.PublishData) : '';
 });
 
 useHead({
-    title: data.value?.TitleData
+    title: datas.value?.TitleData
 });
 
 </script>
