@@ -70,6 +70,15 @@ useSeoMeta({
     twitterTitle: () => datas?.value.TitleData,
     twitterDescription: () => datas?.value.ShorMessage 
 })
+defineOgImageComponent('NuxtSeo', {
+  title: () => datas?.value.TitleData,
+  description: () => datas?.value.ShorMessage,
+  siteName: "Blog",
+  theme: '#00ADD8',
+  colorMode: "dark"
+})
+
+
 
 useHead({
     meta: [

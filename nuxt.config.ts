@@ -2,9 +2,19 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
-    modules: ["@nuxt/ui", "@nuxthub/core"],
+    modules: ["@nuxt/ui", "@nuxthub/core", '@nuxtjs/seo'],
     app: {
-        viewTransition: true
+        viewTransition: true,
+        head: {
+            titleTemplate: "%s",
+            htmlAttrs: {
+                lang: "en"
+            }
+        }
+    },
+    site: {
+        url: "https://nxus.pages.dev",
+        name: "Dylan Marcano"
     },
     vite: {
         optimizeDeps: {
