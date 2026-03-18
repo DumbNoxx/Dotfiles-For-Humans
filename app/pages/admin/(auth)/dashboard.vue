@@ -13,6 +13,10 @@ const logout = async () => {
         })
         .catch(err => err)
 }
+definePageMeta({
+    requiresAuth: true,
+    middleware: ["auth"]
+})
 </script>
 <template>
     <div>

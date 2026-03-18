@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 const props = defineProps<{error: NuxtError }>();
+const cleanMessage = computed(() => {
+  if (props.error.message?.includes('No match') || props.error.message?.includes('NOT FOUND')) {
+    return 'The requested page could not be found or is restricted.'
+  }
+  return props.error.message || 'An unexpected error occurred.'
+})
 </script>
 <template>
     <NuxtLayout>
@@ -11,7 +17,7 @@ const props = defineProps<{error: NuxtError }>();
             public at the
             moment. Please head back.</p>
         <p id="route">
-            {{ error.message }}
+            {{ cleanMessage }}
         </p>
         <nav>
             <NuxtLink to="/" view-transition class="back-to-home">

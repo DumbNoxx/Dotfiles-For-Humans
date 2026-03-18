@@ -55,6 +55,11 @@ const sentData = async (e: Event) => {
         .catch(error => console.error("Error:", error));
 
 }
+definePageMeta({
+    requiresAuth: true,
+    middleware: ["auth"]
+})
+
 </script>
 
 <template>

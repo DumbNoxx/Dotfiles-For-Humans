@@ -31,10 +31,9 @@ async function fetchGithubData() {
 }
 onMounted(fetchGithubData)
 defineOgImageComponent('NuxtSeo', {
-  title: 'Dylan Marcano | Software Developer',
+  title: 'Dylan Marcano',
+  isProd: true,
   description: 'Explore my work: a Software Developer merging cutting-edge technologies with bussiness-driven results.',
-  siteName: "Dylan Marcano",
-  theme: '#00ADD8',
   colorMode: "dark"
 })
 useSeoMeta({
@@ -47,6 +46,9 @@ useSeoMeta({
   twitterTitle: "Dylan Marcano | Software Developer",
   twitterDescription: "Explore my work: a Software Developer merging cutting-edge technologies with bussiness-driven results."
 
+})
+definePageMeta({
+    middleware: ["auth"]
 })
 </script>
 
