@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
-    modules: ["@nuxt/ui", "@nuxthub/core", '@nuxtjs/seo'],
+    modules: ["@nuxt/ui", "@nuxthub/core", '@nuxtjs/seo', '@nuxt/fonts'],
     app: {
         viewTransition: true,
         head: {
@@ -10,6 +10,11 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: "en"
             }
+        }
+    },
+    ogImage: {
+        defaults: {
+            renderer: "satori"
         }
     },
     site: {

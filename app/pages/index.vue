@@ -32,7 +32,6 @@ async function fetchGithubData() {
 onMounted(fetchGithubData)
 defineOgImageComponent('NuxtSeo', {
   title: 'Dylan Marcano | Software Developer',
-  headline: "no bloat, just clean proofs",
   description: 'Explore my work: a Software Developer merging cutting-edge technologies with bussiness-driven results.',
   siteName: "Dylan Marcano",
   theme: '#00ADD8',
