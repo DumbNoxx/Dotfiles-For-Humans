@@ -49,6 +49,8 @@ const formatData = computed(() => {
 useHead({
     title: datas.value?.TitleData
 });
+console.log(dataPost);
+const 
 
 </script>
 <template>
@@ -64,10 +66,10 @@ useHead({
             <div class="skeleton-text"></div>
         </div>
         <div v-else>
-            <div v-if="data">
-                <h1>{{ data?.TitleData }}</h1>
+            <div v-if="datas">
+                <h1>{{ datas?.TitleData }}</h1>
                 <p class="publishData">{{ formatData }}</p>
-                <div class="message" v-html="data?.Message"></div>
+                <div class="message" v-html="datas?.Message"></div>
             </div>
             <div v-else>
                 <h1>Ups</h1>
