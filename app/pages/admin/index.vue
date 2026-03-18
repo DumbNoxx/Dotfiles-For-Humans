@@ -13,9 +13,12 @@ onMounted(async () => {
             credentials: "include"
         });
         if (res.ok) {
+            console.log
             router.push('/admin/dashboard');
         }
-    } catch (error) { }
+    } catch (error) {
+    console.log(error)
+    }
 });
 
 const handleLogin = async (e: Event) => {
