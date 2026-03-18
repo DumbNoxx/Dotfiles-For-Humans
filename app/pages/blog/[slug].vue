@@ -2,13 +2,11 @@
 import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 const { data: posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
-const dataPost = posts;
 const loading = ref<boolean>(false);
 
 const route = useRoute()
 const datas = computed(() => {
-    return dataPost.value?.find(p => {
-    console.log(p.id, route.params.id)
+    return posts.value?.find(p => {
     return p.PostId === route.params.id
     });
 })
