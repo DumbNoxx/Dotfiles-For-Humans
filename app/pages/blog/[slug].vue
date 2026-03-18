@@ -61,9 +61,23 @@ watch(
 const formatData = computed(() => {
     return datas.value ? formatDate(datas.value.PublishData) : '';
 });
+useSeoMeta({
+    title: datas?.TitleData,
+    description: datas?.ShorMessage,
+    ogTitle: data?.TitleData,
+    ogDescription: datas?.ShorMessage,
+    twitterCard: "sumary",
+    twitterTitle: data?.TitleData,
+    twitterDescription: datas?.ShorMessage 
+})
 
 useHead({
-    title: datas.value?.TitleData
+    meta: [
+        { name: 'theme-color', content: '#000000' }
+    ],
+})
+
+useHead({
 });
 </script>
 <template>
@@ -122,7 +136,6 @@ useHead({
         margin: 0;
         margin-top: 2em;
         font-size: 2.5em;
-        color: var(--text-color-neutral);
     }
 
     h2, h3 {
