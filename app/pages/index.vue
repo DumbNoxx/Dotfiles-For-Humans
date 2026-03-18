@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-const { data } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
 const userData = ref<UserApiGithub | null>(null);
 const goxeData = ref<RepoApiGithub | null>(null);
 const pomoData = ref<RepoApiGithub | null>(null);

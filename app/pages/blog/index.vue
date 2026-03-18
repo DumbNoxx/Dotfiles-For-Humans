@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { Posts } from "#shared/types/postData";
-const { data:posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
+const { data: posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
 import { computed } from 'vue';
 const Data = posts;
 
 const sortedPosts = computed(() => {
     if (!Data.value) return [];
-    
+
     return [...Data.value].sort((a, b) => {
         return new Date(b.PublishData).getTime() - new Date(a.PublishData).getTime();
     });
@@ -18,7 +18,7 @@ useSeoMeta({
     ogDescription: "Thoughts on design, architecture, and the real cost of observability.",
     twitterCard: "sumary",
     twitterTitle: "Blog | Essays & Notes",
-    twitterDescription: "Thoughts on design, architecture, and the real cost of observability." 
+    twitterDescription: "Thoughts on design, architecture, and the real cost of observability."
 })
 
 useHead({
@@ -26,6 +26,7 @@ useHead({
         { name: 'theme-color', content: '#000000' }
     ],
 })
+console.log(data)
 </script>
 <template>
     <div>
