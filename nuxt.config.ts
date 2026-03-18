@@ -19,6 +19,18 @@ export default defineNuxtConfig({
         zeroRuntime: false,
         defaults: {
             renderer: "satori"
+        },
+        fonts: [
+            {
+                name: "Maple",
+                weight: 400,
+                path: "/fonts/subset-MapleMono-Regular.woff"
+            }
+        ],
+        satoriOptions: {
+            tailwindConfig: {
+
+            }
         }
     },
     site: {

@@ -22,7 +22,7 @@ const dataGh = defineProps<{
                         <rect x="2" y="4" width="20" height="16" rx="2" pathLength="1" />
                     </svg>
                 </a>
-                <NuxtLink to="/blog" view-transition aria-label="Go to blog">
+                <RouterLink to="/blog" view-transition aria-label="Go to blog">
                     <svg fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -32,7 +32,7 @@ const dataGh = defineProps<{
                             </path>
                         </g>
                     </svg>
-                </NuxtLink>
+                </RouterLink>
             </div>
         </div>
     </section>
