@@ -9,7 +9,7 @@ const { data: posts } = await useFetch<any[]>("https://nxus-api-blog.nxus-dev.wo
 const cachePosts = ref<unknown[]>([]);
 
 const datas = computed(() => {
-    const id = normalizeId(route.params.id);
+    const id = normalizeId(route.params.slug);
     if (!id) {
     console.log("err: undefined id")
     return null;
