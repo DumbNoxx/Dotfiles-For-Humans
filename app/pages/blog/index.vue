@@ -27,7 +27,6 @@ useHead({
         { name: 'theme-color', content: '#000000' }
     ],
 })
-console.log(data);
 </script>
 <template>
     <div>

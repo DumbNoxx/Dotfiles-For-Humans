@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
-const { data: posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one");
+const { data: posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
 const dataPost = posts;
 const loading = ref<boolean>(false);
 
