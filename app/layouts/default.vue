@@ -42,6 +42,10 @@
   font-display: swap;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+}
 
 
 :root {

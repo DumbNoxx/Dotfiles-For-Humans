@@ -33,7 +33,7 @@ onMounted(fetchGithubData)
 useMetaSeo({
   title: "Dylan Marcano | Software Developer",
   ogUrl: "https://nxus.pages.dev",
-  ogTitle:"Dylan Marcano | Software Developer" 
+  ogTitle:"Dylan Marcano | Software Developer", 
   description: "Explore my work: a Software Developer merging cutting-edge technologies with bussiness-driven results.",
   ogDescription:"Explore my work: a Software Developer merging cutting-edge technologies with bussiness-driven results.",
   twitterCard: "sumary",
