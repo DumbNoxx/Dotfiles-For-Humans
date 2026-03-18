@@ -12,7 +12,7 @@ const datas = computed(() => {
 const fetchData = async (id: string) => {
     loading.value = true;
     try {
-        const res = await fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
+        const res = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ PostId: id })
@@ -49,8 +49,6 @@ const formatData = computed(() => {
 useHead({
     title: datas.value?.TitleData
 });
-console.log(dataPost);
-
 </script>
 <template>
     <div class="post">

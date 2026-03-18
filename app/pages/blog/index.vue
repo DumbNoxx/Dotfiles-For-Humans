@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Posts } from "#shared/types/postData";
 const { data: posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
+const {data} = getPosts();
 import { computed } from 'vue';
 const Data = posts;
 
@@ -26,6 +27,7 @@ useHead({
         { name: 'theme-color', content: '#000000' }
     ],
 })
+console.log(data);
 </script>
 <template>
     <div>
