@@ -30,7 +30,12 @@ export default defineNuxtConfig({
             crawlLinks: true,
             routes: [
                 '/',
-            ]
+            ],
+        },
+    },
+    routeRules: {
+        "/admin/**": {
+            prerender: false,
         },
     },
     vite: {
