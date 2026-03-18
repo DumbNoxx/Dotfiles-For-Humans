@@ -62,13 +62,13 @@ const formatData = computed(() => {
     return datas.value ? formatDate(datas.value.PublishData) : '';
 });
 useSeoMeta({
-    title: datas?.TitleData,
-    description: datas?.ShorMessage,
-    ogTitle: datas?.TitleData,
-    ogDescription: datas?.ShorMessage,
+    title: () => datas?.TitleData,
+    description: () => datas?.ShorMessage,
+    ogTitle: () => datas?.TitleData,
+    ogDescription: () => datas?.ShorMessage,
     twitterCard: "sumary",
-    twitterTitle: datas?.TitleData,
-    twitterDescription: datas?.ShorMessage 
+    twitterTitle: () => datas?.TitleData,
+    twitterDescription: () => datas?.ShorMessage 
 })
 
 useHead({
@@ -76,9 +76,6 @@ useHead({
         { name: 'theme-color', content: '#000000' }
     ],
 })
-
-useHead({
-});
 </script>
 <template>
     <div class="post">
