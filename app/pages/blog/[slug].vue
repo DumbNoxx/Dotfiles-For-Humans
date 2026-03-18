@@ -50,7 +50,6 @@ useHead({
     title: datas.value?.TitleData
 });
 console.log(dataPost);
-const 
 
 </script>
 <template>
