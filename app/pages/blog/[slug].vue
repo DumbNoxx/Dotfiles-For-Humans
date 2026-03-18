@@ -1,26 +1,38 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
-const { data: posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
-const loading = ref<boolean>(false);
 
-const route = useRoute()
+const route = useRoute();
+
+const { data: posts } = await useFetch<any[]>("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
+
+const cachePosts = ref<unknown[]>([]);
+
 const datas = computed(() => {
-    return posts.value?.find(p => {
-    return p.PostId === route.params.id
-    });
-})
+    const id = route.params.id;
+    
+    let post = posts.value?.find(p => String(p.PostId) === String(id));
+    
+    if (!post) {
+        post = cachePosts.value.find(p => String(p.PostId) === String(id));
+    }
+
+    console.log("Buscando ID:", id, "Post encontrado:", post?.PostId);
+    return post;
+});
+
 const fetchData = async (id: string) => {
     loading.value = true;
     try {
-        const res = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
+        // Nota: Cambié res.json() porque useFetch ya devuelve la data procesada
+        const { data } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/one", {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ PostId: id })
+            body: { PostId: id }
         });
-        const json = await res.json();
 
-        PostsData.value?.push(json);
+        if (data.value) {
+            cachePosts.value.push(data.value);
+        }
     } finally {
         loading.value = false;
     }
