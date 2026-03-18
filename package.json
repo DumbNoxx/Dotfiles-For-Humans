@@ -12,10 +12,9 @@
         "drizzle:migrate": "drizzle-kit migrate"
     },
     "dependencies": {
-        "@libsql/client": "^0.17.0",
-        "@nuxt/fonts": "0.14.0",
         "@nuxt/ui": "^4.5.1",
-        "@nuxthub/core": "^0.10.7",
+        "@nuxtjs/robots": "^5.7.1",
+        "@nuxtjs/sitemap": "^7.6.0",
         "@takumi-rs/core": "^0.73.1",
         "@takumi-rs/wasm": "^0.73.1",
         "@tiptap/extension-code": "^3.20.4",
@@ -27,19 +26,9 @@
         "@tiptap/starter-kit": "^3.20.4",
         "@tiptap/suggestion": "^3.20.4",
         "@tiptap/vue-3": "^3.20.4",
-        "better-sqlite3": "^12.8.0",
-        "dotenv": "^17.3.1",
-        "drizzle-orm": "^0.45.1",
         "nuxt": "^4.4.2",
         "tailwindcss": "^4.2.1",
         "vue": "^3.5.30",
         "vue-router": "^5.0.3"
-    },
-    "devDependencies": {
-        "@nuxtjs/seo": "3.4.0",
-        "@resvg/resvg-wasm": "^2.6.2",
-        "drizzle-kit": "^0.31.10",
-        "satori": "^0.25.0",
-        "tsx": "^4.21.0"
     }
 }

@@ -30,12 +30,6 @@ async function fetchGithubData() {
     }
 }
 onMounted(fetchGithubData)
-defineOgImageComponent('NuxtSeo', {
-  title: 'Dylan Marcano',
-  isProd: true,
-  description: 'Explore my work: a Software Developer merging cutting-edge technologies with bussiness-driven results.',
-  colorMode: "dark"
-})
 useSeoMeta({
   title: "Dylan Marcano | Software Developer",
   ogUrl: "https://nxus.pages.dev",

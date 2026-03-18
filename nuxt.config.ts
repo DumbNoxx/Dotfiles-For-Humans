@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
-    modules: ["@nuxt/ui", "@nuxthub/core", '@nuxtjs/seo', '@nuxt/fonts'],
+    modules: ["@nuxt/ui", "@nuxtjs/sitemap" ],
     app: {
         viewTransition: true,
         head: {
@@ -10,32 +10,7 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: "en"
             }
-        }
-    },
-    experimental: {
-        componentIslands: true,
-    },
-    ogImage: {
-        zeroRuntime: false,
-        defaults: {
-            renderer: "satori"
         },
-        fonts: [
-            {
-                name: "Maple",
-                weight: 400,
-                path: "/fonts/subset-MapleMono-Regular.woff"
-            }
-        ],
-        satoriOptions: {
-            tailwindConfig: {
-
-            }
-        }
-    },
-    site: {
-        url: "https://nxus.pages.dev",
-        name: "Dylan Marcano"
     },
     nitro: {
         prerender: {

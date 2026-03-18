@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { Posts } from "#shared/types/postData";
-const { data: posts, status } = await useFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all");
+const { data: posts, status } = await useLazyFetch("https://nxus-api-blog.nxus-dev.workers.dev/api/getPost/all", {
+server: true
+});
 const {data} = getPosts();
 import { computed } from 'vue';
 const Data = posts;
@@ -12,14 +14,6 @@ const sortedPosts = computed(() => {
         return new Date(b.PublishData).getTime() - new Date(a.PublishData).getTime();
     });
 });
-defineOgImageComponent('NuxtSeo', {
-  title: 'Blog | Insights on Design & Architecture',
-  description: 'Essays on software architecture, minimalist design, and the practical challenges of modern web development.',
-  siteName: "Blog",
-  theme: '#00ADD8',
-  colorMode: "dark"
-})
-
 useSeoMeta({
     title: "Blog | Insights on Design & Architecture",
     description: "Essays on software architecture, minimalist design, and the practical challenges of modern web development.",
