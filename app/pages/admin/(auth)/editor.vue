@@ -36,7 +36,7 @@ const sentData = async (e: Event) => {
         ShortMessage: shortMessage.value,
         Message: value.value
     }
-    fetch("/api/admin/api/sentData", {
+    fetch("https://nxus-api-blog.nxus-dev.workers.dev/api/admin/api/sentData", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
