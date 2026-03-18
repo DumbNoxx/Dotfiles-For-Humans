@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         componentIslands: true,
     },
     ogImage: {
-        zeroRuntime: true,
+        zeroRuntime: false,
         defaults: {
             renderer: "satori"
         }
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     },
     nitro: {
         prerender: {
-            crawlLinks: true,
+            crawlLinks: false,
             routes: [
                 '/',
             ],
@@ -37,6 +37,10 @@ export default defineNuxtConfig({
         "/admin/**": {
             prerender: false,
         },
+        "/blog/**": {
+            isr: 3600
+        }
+
     },
     vite: {
         optimizeDeps: {
