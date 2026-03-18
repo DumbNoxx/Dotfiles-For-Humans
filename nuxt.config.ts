@@ -12,7 +12,11 @@ export default defineNuxtConfig({
             }
         }
     },
+    experimental: {
+        componentIslands: true,
+    },
     ogImage: {
+        zeroRuntime: true,
         defaults: {
             renderer: "satori"
         }
@@ -20,6 +24,14 @@ export default defineNuxtConfig({
     site: {
         url: "https://nxus.pages.dev",
         name: "Dylan Marcano"
+    },
+    nitro: {
+        prerender: {
+            crawlLinks: true,
+            routes: [
+                '/',
+            ]
+        },
     },
     vite: {
         optimizeDeps: {

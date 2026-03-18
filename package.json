@@ -37,7 +37,9 @@
     },
     "devDependencies": {
         "@nuxtjs/seo": "3.4.0",
+        "@resvg/resvg-wasm": "^2.6.2",
         "drizzle-kit": "^0.31.10",
+        "satori": "^0.25.0",
         "tsx": "^4.21.0"
     }
 }
