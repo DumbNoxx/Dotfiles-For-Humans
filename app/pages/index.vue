@@ -2,28 +2,29 @@
 import { onMounted, ref } from 'vue';
 const userData = ref<UserApiGithub | null>(null);
 const goxeData = ref<RepoApiGithub | null>(null);
-const pomoData = ref<RepoApiGithub | null>(null);
+const pulseData = ref<RepoApiGithub | null>(null);
 async function fetchGithubData() {
     try {
         const userPromise = fetch('https://api.github.com/users/dumbnoxx');
         const goxePromise = fetch('https://api.github.com/repos/DumbNoxx/goxe');
-        const pomoPromise = fetch('https://api.github.com/repos/DumbNoxx/pulse.nvim');
+        const pulsePromise = fetch('https://api.github.com/repos/DumbNoxx/pulse.nvim');
 
-        const [userRes, goxeRes, pomoRes] = await Promise.all([
+        const [userRes, goxeRes, pulseRes] = await Promise.all([
             userPromise,
             goxePromise,
-            pomoPromise
+            pulsePromise,
         ]);
 
-        const [user, goxe, pomo] = await Promise.all([
+        const [user, goxe, pulse] = await Promise.all([
             userRes.json() as Promise<UserApiGithub>,
             goxeRes.json() as Promise<RepoApiGithub>,
-            pomoRes.json() as Promise<RepoApiGithub>
+            pulseRes.json() as Promise<RepoApiGithub>
         ]);
 
         userData.value = user;
         goxeData.value = goxe;
-        pomoData.value = pomo;
+        pulseData.value = pulse;
+
 
     } catch (error) {
         console.error(error);
@@ -50,7 +51,7 @@ definePageMeta({
     <div>
         <Hero :data="userData" />
         <Divider />
-        <Projects :goxe="goxeData" :pom="pomoData" />
+        <Projects :goxe="goxeData" :pulse="pulseData" />
         <Divider />
         <About />
         <Divider />

@@ -2,7 +2,7 @@
 import DescriptionCard from './_components/DescriptionCard.vue';
 const data = defineProps<{
     goxe: RepoApiGithub | null,
-    pom: RepoApiGithub | null
+    pulse: RepoApiGithub | null,
 }>();
 
 </script>
@@ -11,7 +11,7 @@ const data = defineProps<{
         <h2>MY REPOS</h2>
         <div class="repos">
             <DescriptionCard :data="goxe" />
-            <DescriptionCard :data="pom" />
+            <DescriptionCard :data="pulse" />
         </div>
     </section>
 </template>

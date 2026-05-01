@@ -15,6 +15,7 @@
             pkgs.nodePackages.typescript
             pkgs.nodePackages.typescript-language-server
             pkgs.vue-language-server
+            pkgs.nodePackages.nodejs
           ];
         };
       }
