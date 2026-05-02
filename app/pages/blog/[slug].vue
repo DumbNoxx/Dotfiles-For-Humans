@@ -11,8 +11,7 @@ const cachePosts = ref<unknown[]>([]);
 const datas = computed(() => {
     const id = normalizeId(route.params.slug);
     if (!id) {
-    console.log("err: undefined id")
-    return null;
+        return null;
     }
     
     let post = posts.value?.find(p => String(p.PostId) === id);
@@ -21,7 +20,6 @@ const datas = computed(() => {
         post = cachePosts.value.find(p => String(p.PostId) === id);
     }
 
-    console.log("ID:", id, "Post:", post?.PostId);
     return post;
 });
 
